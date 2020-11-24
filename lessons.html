@@ -31,22 +31,20 @@
                 <div class="line3"></div>
             </div>
         </nav>
-        <section class="jumbotron">
-            <h1>Jonathan Tang Brass Studio</h1>
+        <section class="jumbotron" id="academy">
+            <h1><span>Cincinnati</span> <span>Brass</span> <span>Academy</span></h1>
         </section>
         <section class="lessons">
             <h2>Let's work together! If you want to learn, I want to teach!</h2>
             <p>Like many of my colleagues, lately I’ve been feeling a little unfulfilled spiritually due to the lack of camaraderie with friends/colleagues/students and I’ve been feeling that I wanted to get back into teaching. When I was still in my undergrad I was teaching on a weekly basis which not only helped my students, but also helped me develop and hone my craft as a teacher. This is something I haven’t been able to do yet at CCM and I miss it very much! I’ve helped guide students in the direction they want and I’m very pleased with how far they’ve gone. Several have made Allstate and even continued to pursue music in college.</p>
-            <p>Today, I would like to invite any brass players to join my online studio. To follow social guidelines, any and all lessons will be online for the foreseeable future. I’ve reduced my rates to compensate for this.</p>
-            <p>Don’t wait until August to start preparing for Allstate, National Youth Orchestra, or College auditions. Start preparing and planning now! If you want to learn I want to teach! If you are a music educator and you’ve got trombone players that need help, please send them my way!</p>
-            <p>For rates and options please see the poster below.</p>
-            <p>I look forward to working with some of you soon!</p>
+            <p>Today, I would like to invite any brass players to join my online studio. To follow social guidelines, any and all lessons will be online for the foreseeable future. I’ve reduced my rates to compensate for this. Don’t wait until August to start preparing for Allstate, National Youth Orchestra, or College auditions. Start preparing and planning now! If you want to learn I want to teach! If you are a music educator and you’ve got trombone players that need help, please send them my way!</p>
+            <p>For rates and options please see the poster below. I look forward to working with some of you soon!</p>
         </section>
         <section class="poster">
-            <img src="#" />
+            <img src="img/Poster.JPG" />
         </section>
         <section class="form">
-            <form>
+            <form method="POST" action="lessonForm.php">
                 <div class="name">
                     <div class="name_label">
                         <label for="fname">First Name*</label>
@@ -54,8 +52,8 @@
                     </div>
                  
                     <div class="name_input">
-                        <input type="text" id="fname" required>
-                        <input type="text" id="lname" required>
+                        <input type="text" name="fname" id="fname" required>
+                        <input type="text" name="lname" id="lname" required>
                     </div>
                 </div>
                 <br>
@@ -63,17 +61,17 @@
                 <div class="main_form">
                 <label for="exp">Grade/Experience Level*</label>
                 <br>
-                <input type="text" id="exp" required>
+                <input type="text" name="exp" id="exp" required>
                 <br><br>
 
                 <label for="email">Email Address*</label>
                 <br>
-                <input type="text" id="email" required>
+                <input type="text" name="email" id="email" required>
                 <br><br>
 
                 <label for="phone">Phone Number (optional)</label>
                 <br>
-                <input type="text" id="phone">
+                <input type="text" name="phone" id="phone">
                 <br><br>
 
                 <label for="material">What would you like to work on?*</label>
@@ -81,7 +79,7 @@
                 <textarea name="message" rows="7" cols="78" id="content" required></textarea>
                 <br><br>
 
-                <input type="submit" value="Send" id="send">
+                <input type="submit" name="send" value="Send" id="send">
             </div>
             </form>
         </section>
@@ -92,6 +90,7 @@
             </div>
             <p class="copy">Copyright &copy 2020 Jonathan Tang. Website created by Jacob Fenner</p>
         </footer>
+        <div class="tint"></div>
         <script src="app.js"></script>
     </div>
 </body>
