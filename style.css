@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 /*GENERAL*/
 html{
@@ -13,6 +14,7 @@ html{
 
 body{
   font-size: 16px;
+  font-family: 'Open Sans', Helvetica, sans-serif;  
   background-image: radial-gradient(circle at 60%, rgb(80, 80, 80) 10%, rgb(55, 55, 55), rgb(35, 35, 35) 90%);
   background-attachment: fixed;
   height: 100%;
@@ -44,7 +46,7 @@ nav{
   font-weight: 400;
   position: relative;
   bottom: 2vh;
-  z-index: 5;
+  z-index: 50;
   white-space: nowrap;
 }
 
@@ -112,8 +114,8 @@ li{
 .burger div{
   width: 25px;
   height: 3px;
-  background-color: rgb(218, 218, 218);
-  border: 2px, solid, white;
+  background-color: rgb(247, 247, 247);
+  border: 2px, solid, rgb(247, 247, 247);
   z-index: 4;
   margin: 5px;
   transition: all 0.5s ease;
@@ -161,61 +163,54 @@ li{
 /*HOMEPAGE MAIN CONTENT*/
 .container{
   width: 100vw;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  align-items: center;
+  display: flex;
 }
 
 .titles{
-  position: relative;
-  bottom: 50px;
-  color: white;
+  position: absolute;
+  bottom: 300px;
+  color: rgb(247, 247, 247);
 }
 
-.main_img{
-  position: relative; 
+.container img{
+  position: absolute; 
+  bottom: 0;
+  left: 40vw;
+  padding-bottom: 73px;
+  width: 650px;
+  height: auto;
+  z-index: -1;
+  overflow: unset;
 }
 
 .titles h1, p{
   white-space: nowrap;
+  padding-left: 40px;
 }
 
 .titles h1{
-  font-size: 4vw;
-  font-weight: 600;
+  font-size: 48px;
+  font-weight: 300;
 }
 
 .titles p{
-  font-size: 1.36vw;
-}
-
-.conatiner img{
-  width: 100%;
-  position: absolute;
-  left: 100px;
-  z-index: 1;
+  font-size: 16.2px;
 }
 
 
 /* ABOUT ME */
-.biography{
-  color: rgb(255, 255, 255);
+#biography-banner{
+  background-image: url(img/gallery5.png);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  box-shadow: 0px 2px 4px #9b9b9b;
+  height: 272px;
   text-align: center;
-  height: 80vh;
 }
 
-.banner{
-  width: 100%;
-  height: 272px;
-  object-fit: cover;
-  object-position: 0 10%;
-  position: absolute;
-  top: 15vh;
-  left: 0;
-  z-index: -1;
-  box-shadow: 0px 2px 4px #9b9b9b;
-}
-.biography p{
+#biography-banner p{
   font-family: 'Roboto', sans-serif;
   position: absolute;
   top: 21vh;
@@ -225,10 +220,10 @@ li{
   margin-right: auto;
 }
 
-.biography h2{
+#biography-banner h2{
   font-size: 36px;
   font-weight: 300;
-  color: white;    
+  color: rgb(247, 247, 247);    
   position: absolute;
   top: 27vh;
   left: 0;
@@ -243,7 +238,7 @@ li{
   border-radius: 100px;
   z-index: 2;
   position: relative;   
-  top: 30vh; 
+  top: 90px; 
   background-color: rgb(56, 119, 212);
 }
 
@@ -252,7 +247,7 @@ li{
 }
 
 .bio_quote, .bio{
-  color: white;
+  color: rgb(247, 247, 247);
   max-width: 75%;
   margin-left: auto;
   margin-right: auto;
@@ -260,8 +255,8 @@ li{
 
 .bio_quote{
   text-align: center;
-  position: relative;
-  bottom: 30px;
+  margin-top: 120px;
+  margin-bottom: 30px;
 }
 
 .bio_quote h2{
@@ -276,6 +271,27 @@ li{
   font-weight: 300;
 }
 
+.resume{
+  text-align: center;
+  margin: 60px;
+}
+
+.resume-pdf{
+  color: rgb(218, 218, 218);
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 28px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-image: linear-gradient(135deg, rgb(24, 73, 179), rgb(56, 119, 212));
+  box-shadow: 2px 2px 20px #9b9b9b;
+}
+
+.resume a:hover{
+  text-decoration: none;
+  color: rgb(218, 218, 218);
+}
 
 
 /*LESSONS PAGE */
@@ -286,14 +302,14 @@ li{
   background-repeat: no-repeat;
   border-radius: 0;
   box-shadow: 0px 2px 4px #9b9b9b;
-  min-height: 300px;
+  height: 300px;
   text-align: center;
 }
 
 .jumbotron h1{
   display: inline-block;
   padding: 30px;
-  color: white;
+  color: rgb(247, 247, 247);
   background-color: rgba(235, 235, 235, 0.4);
   border: solid white 10px;
   white-space: pre-line;
@@ -320,13 +336,13 @@ li{
 
 .lessons h2{
   padding: 40px 0;
-  color: white;
+  color: rgb(247, 247, 247);
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
 }
 
 .lessons p{
-  color: white;
+  color: rgb(247, 247, 247);
   padding-bottom: 20px;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -367,7 +383,7 @@ textarea{
 }
 
 label{
-  color: white;
+  color: rgb(247, 247, 247);
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
@@ -445,6 +461,7 @@ textarea:focus{
 #media{
   background-image: url(img/gallery9.png);
   background-position: 0% 35%;
+  height: 300px;
 }
 
 #media h2{
@@ -456,7 +473,7 @@ textarea:focus{
   top: 200px;
   font-size: 36px;
   font-weight: 300;
-  color: white;
+  color: rgb(247, 247, 247);
 }
 
 .recording-grid-container{
@@ -502,13 +519,13 @@ textarea:focus{
 }
 
 .video-card h3, h5, p{
-  color: white;
+  color: rgb(247, 247, 247);
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
 
 .audio-card h3, h5, p{
-  color: white;
+  color: rgb(247, 247, 247);
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
@@ -571,7 +588,7 @@ textarea:focus{
   display: inline-block;
   height: 5px;
   width: 20px;
-  background-color: white;
+  background-color: rgb(247, 247, 247);
   opacity: 0.65;
 }
 
@@ -648,7 +665,7 @@ textarea:focus{
 
 
 .credit h4{
-  color: white;
+  color: rgb(247, 247, 247);
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
@@ -659,6 +676,7 @@ textarea:focus{
 #downloads{
   background-image: url(img/gallery11.png);
   background-position: bottom;
+  height: 300px;
 }
 
 #downloads h2{
@@ -670,12 +688,13 @@ textarea:focus{
   top: 200px;
   font-size: 36px;
   font-weight: 300;
-  color: white;
+  color: rgb(247, 247, 247);
 }
 
 /* CONTACT */
 #contact{
   background-image: url(img/skyline.jpg);
+  height: 300px;
 }
 .jumbotron{
   border-radius: 0;
@@ -683,7 +702,7 @@ textarea:focus{
   background-size: cover;
   background-position: 0% 50%;
   box-shadow: 0px 2px 4px #9b9b9b;
-  min-height: 300px;
+  height: 300px;
   text-align: center;
   opacity: 0.8;
 }
@@ -696,7 +715,7 @@ textarea:focus{
 }
 
 .contact_me h2, p{
-  color: white;
+  color: rgb(247, 247, 247);
   padding-bottom: 30px;
 
 }
@@ -734,8 +753,8 @@ textarea:focus{
   bottom: 0;
   background-color: rgb(28, 28, 28);
   /* justify-content: center; */
-  color: white;
-  border-top: 1px solid white;
+  color: rgb(247, 247, 247);
+  border-top: 1px solid rgb(247, 247, 247);
   text-align: center;
   margin-top: 30px;
 }
@@ -747,8 +766,8 @@ textarea:focus{
   bottom: 0;
   background-color: rgb(28, 28, 28);
   justify-content: center;
-  color: white;
-  border-top: 1px solid white;
+  color: rgb(247, 247, 247);
+  border-top: 1px solid rgb(247, 247, 247);
   text-align: center;
 }
 
@@ -758,7 +777,7 @@ textarea:focus{
 }
 
 .fab{
-  color: white;
+  color: rgb(247, 247, 247);
 }
 
 .fa-facebook-f{
@@ -791,21 +810,10 @@ textarea:focus{
 
 
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1096px){
   /* NAVIGATION */
   .nav-links{
       width: 60%;
-  }
-
-  /* HOMEPAGE */
-  .titles h1{
-    font-size: 42px;
-  }
-  .titles p{
-    font-size: 14.3px;
-  }
-  .main_img{
-    right: 55px;
   }
 
   /* MEDIA */
@@ -820,7 +828,7 @@ textarea:focus{
   }  
 }
 
-@media screen and (max-width: 760px){
+@media screen and (max-width: 900px){
   body{
       overflow-x: hidden;
   }
@@ -850,21 +858,19 @@ textarea:focus{
 
   /* HOME  */
   .container{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3fr;
-    justify-items: center;
+    width: 80%;
+    justify-content: center;
   }
-  .main_img img{
-    height: 300px;
-    top: 100px;
-    position: relative;
-    top: -28px;
-    right: -100px;
+  .container img{ 
+    width: 550px;
+    left: 150px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .titles{
     position: relative;
-    top: 50px;
+    top: 0px;
   }  
 
   /* LESSONS */
@@ -952,7 +958,7 @@ textarea:focus{
     display: inline-block;
     height: 5px;
     width: 20px;
-    background-color: white;
+    background-color: rgb(247, 247, 247);
     opacity: 0.65;
   }
   .arrow-container{

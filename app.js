@@ -36,7 +36,6 @@ const navSlide = () => {
 };
 
 
-
 //IMAGE GALLERY SLIDER
 const imgScroll = () => {
     const rightArrow = document.getElementById('right');
