@@ -102,6 +102,10 @@ li{
   transition: background-color 0.5s ease-in;
 }
 
+.content-inactive{
+  pointer-events: none;
+}
+
 .blur-active{
   position: fixed; 
   height: 100%;
@@ -127,14 +131,6 @@ li{
   z-index: 4;
   margin: 5px;
   transition: all 0.5s ease;
-}
-
-.nav-active{
-  transform: translateX(0%);
-  background-color: rgb(28, 28, 28);
-  transition: background-color 0.5s ease-in;
-  z-index: 16;
-  pointer-events: auto;
 }
 
 .navbar-active{
@@ -188,7 +184,7 @@ li{
   width: 650px;
   height: auto;
   z-index: -1;
-  overflow: unset;
+  /* overflow: unset; */
 }
 
 .titles h1, p{
@@ -931,11 +927,19 @@ footer .copy{
     display: block;
     z-index: 50;
   }
+  .nav-active{
+    transform: translateX(0%);
+    background-color: rgb(28, 28, 28);
+    transition: background-color 0.5s ease-in;
+    z-index: 16;
+    pointer-events: auto;
+  }
 
   /* HOME  */
   .container{
     width: 80%;
     justify-content: center;
+    min-height: 500px;
   }
   .container img{ 
     width: 550px;
