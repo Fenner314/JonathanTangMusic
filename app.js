@@ -35,6 +35,36 @@ const navSlide = () => {
     }); 
 };
 
+//FIX HEADSHOT TO TOP CORNER ON SCROLL
+// const headshot = document.getElementById('headshot');
+// const topOfHeadshot = headshot.offsetTop;
+
+// const fixHeadshot = () => {
+//     if (window.scrollY >= topOfHeadshot) {
+//         document.body.classList.add('fixed-headshot');
+//     } else {
+//         document.body.classList.remove('fixed-headshot');
+//     }
+// };
+
+// window.addEventListener('scroll', fixHeadshot);
+
+//FIX BRASS ACADEMY LOGO TO TOP CORNER ON SCROLL
+// const academy = document.getElementById('academy-logo');
+// const topOfAcademy = academy.offsetTop;
+// const mobile = window.matchMedia('(max-width: 900px)');
+
+// const fixAcademy = () => {
+//     if (window.scrollY >= topOfAcademy) {
+//         document.body.classList.add('fixed-logo');
+//     } else {
+//         document.body.classList.remove('fixed-logo');
+//     }
+// };
+
+// window.addEventListener('scroll', fixAcademy)
+
+
 
 //IMAGE GALLERY SLIDER
 const imgScroll = () => {
@@ -63,11 +93,13 @@ const imgScroll = () => {
     const btnNine = document.getElementById('slider-button-9');
     const btnTen = document.getElementById('slider-button-10');
     const btnEleven = document.getElementById('slider-button-11');
+    const sliderButtons = [btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine, btnTen, btnEleven]
+    const buttons = document.getElementsByClassName('slider-button');
     const amount = 600;
     let initial = 0;
     let counter = 0;
 
-    const mobile = window.matchMedia('(max-width: 760px)');
+    const mobile = window.matchMedia('(max-width: 900px)');
 
     rightArrow.onclick = function() {
         initial += amount;
@@ -102,6 +134,10 @@ const imgScroll = () => {
         counter -= 1;
     };
 
+    buttons.onclick = function() {
+        buttons.classList.toggle('slider-button-active');
+    }
+
     btnOne.onclick = function() {
         if (mobile.matches) {
             imgContainer.style.transform = 'translateX(0px)';
@@ -113,6 +149,10 @@ const imgScroll = () => {
         rightArrow.style.visibility = 'visible';
         initial = 0; 
         counter = 0;
+        sliderButtons[counter].classList.toggle('slider-button-active');
+        // if (sliderButtons.every(function(btn){return btn.classList = 'slider-button'})) {
+        //     sliderButtons[counter].classList.toggle('slider-button-reset');
+        // } 
     };
     
     btnTwo.onclick = function() {

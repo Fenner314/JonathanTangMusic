@@ -33,55 +33,50 @@
                 <div class="line3"></div>
             </div>
         </nav>
-
-        <section class="jumbotron" id="contact">
             
         </section>
         <section>
             <div class="contact_me">
+                <img src="img/skyline.jpg" class="contact-background" />
                 <h2>Contact</h2>
-                <p>If you would like to book me for a masterclass or recording session, have any questions about music, the marching arts, fitness, or arrangements, or just feel like saying hi, please feel free to leave your name and email and I’ll get back to you!</p>
             </div>
             
-            <div class="form">
-                <form method="POST" action="contactForm.php">
+            <div class="form" id="contact-form">
+                <p>If you would like to book me for a masterclass or recording session, have any questions about music, the marching arts, fitness, or arrangements, or just feel like saying hi, please feel free to leave your name and email and I’ll get back to you!</p>
+                <form>
                     <div class="name">
-                        <div class="name_label">
-                            <label for="fname">First Name*</label>
-                            <label for="lname" id="lastname">Last Name*</label>
-                        </div>
-                     
+
                         <div class="name_input">
-                            <input type="text" name="fname" id="fname" required>
-                            <input type="text" name="lname" id="lname" required>
+                            <input type="text" name="fname" id="fname" placeholder="First Name*" required>
+                            <input type="text" name="lname" id="lname" placeholder="Last Name*" required>
                         </div>
                     </div>
                     <br>
         
-                    <label for="email">Email Address*</label>
+                    <!-- <label for="email">Email Address*</label> -->
                     <br>
-                    <input type="text" name="email" id="email" required>
+                    <input type="text" name="email" id="email" placeholder="Email*" required>
                     <br><br>
         
-                    <label for="subject">Subject*</label>
+                    <!-- <label for="subject">Subject*</label> -->
                     <br>
-                    <input type="text" name="subject" id="subject">
+                    <input type="text" name="subject" id="subject" placeholder="Subject*" required>
                     <br><br>
         
-                    <label for="message">Message*</label>
+                    <!-- <label for="message">Message*</label> -->
                     <br>
-                    <textarea name="message" rows="7" cols="78" required></textarea>
+                    <textarea name="message" rows="7" cols="78" placeholder="Write your message here.*" required></textarea>
                     <br><br>
 
                      <input type="submit" value="Send" name="send" id="send">
                 </form>
             </div>
         </section>
-        <section id="map">
+        <!-- <section id="map">
             <div id="map"></div>
-        </section>
+        </section> -->
 
-        <footer class="footer">
+        <footer class="footer" id="footer-contact">
             <div class="social">
                 <a href="https://www.facebook.com/jaytangmusic" target="_blank"><i class="fab fa-facebook-f fa-lg"></i></a>
                 <a href="https://www.instagram.com/jaytangmusic/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
