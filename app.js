@@ -1,5 +1,4 @@
 //NAVIGATION 
-
 const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
@@ -9,15 +8,16 @@ const navSlide = () => {
     const body = document.body;
     const notNav = document.querySelector('.not-nav');
 
-    burger.addEventListener('click', () => {
+    navBar.classList.add('.nav-toggle');
 
+    burger.addEventListener('click', () => {
         //Toggle Nav
         tint.classList.toggle('tint-active');
         nav.classList.toggle('nav-active');
-        // nav.style.pointerEvents = 'auto';
+        navBar.classList.toggle('nav-toggle');
         navBar.classList.toggle('navbar-active');
         body.classList.toggle('no-scroll');
-        notNav.classList.toggle('content-inactive')
+        notNav.classList.toggle('content-inactive');
 
 
         //Animate Links
@@ -32,29 +32,53 @@ const navSlide = () => {
         //Burger Animation
         burger.classList.toggle('toggle'); 
         
-        
+        let happened = true;
+        let clickX = burger.classList.value === 'burger'
+
+        window.onresize = () => {
+            mobile = window.matchMedia('(max-width: 900px)');
+            if (!mobile.matches && happened) {    
+                tint.classList.remove('tint-active');
+                nav.classList.remove('nav-active');
+                navBar.classList.remove('nav-toggle');
+                navBar.classList.remove('navbar-active');
+                body.classList.remove('no-scroll');
+                notNav.classList.remove('content-inactive');
+                burger.classList.remove('toggle');
+                navLinks.forEach((link, index) => {
+                    if(link.style.animation) {
+                        link.style.animation = '';
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+                    }
+                });
+                happened = false;
+            } else {
+              
+            }
+        }
+
+        if (clickX) {
+            happened = false;
+        }
 
     }); 
 };
 
-//FIX HEADSHOT TO TOP CORNER ON SCROLL
-// const headshot = document.getElementById('headshot');
-// const topOfHeadshot = headshot.offsetTop;
 
-// const fixHeadshot = () => {
-//     if (window.scrollY >= topOfHeadshot) {
-//         document.body.classList.add('fixed-headshot');
-//     } else {
-//         document.body.classList.remove('fixed-headshot');
-//     }
-// };
+const navbarChange = () => {
+    const navbar = document.getElementById('myNav');
 
-// window.addEventListener('scroll', fixHeadshot);
+    const navbarGray = () => {
+        if (window.scrollY > 0) {
+            document.body.classList.add('navbar-change');
+        } else {
+            document.body.classList.remove('navbar-change');
+        }
+    }
 
-
-
-//IMAGE GALLERY SLIDER
-
+    document.addEventListener('scroll', navbarGray)
+}
 
 
 
@@ -76,9 +100,7 @@ const navSlide = () => {
 
 const app = () => {
     navSlide();
-    
-    console.log('hello')
-    // initMap();
+    navbarChange();
 };
 
 document.addEventListener('DOMContentLoaded', function(e) {app()})

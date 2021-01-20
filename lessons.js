@@ -12,6 +12,8 @@ const fixAcademy = () => {
     }
 };
 
+document.addEventListener('scroll', fixAcademy);
+
 window.onresize = () => {
     mobile = window.matchMedia('(max-width: 900px)');
     if (!mobile.matches) {    
@@ -21,3 +23,4 @@ window.onresize = () => {
         document.body.classList.remove('fixed-logo')
     }
 }
+

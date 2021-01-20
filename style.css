@@ -38,8 +38,22 @@ nav{
   z-index: 10;
   position: fixed;
   width: 100%;
+  background-image: radial-gradient(circle at 60%, rgb(80, 80, 80) 10%, rgb(55, 55, 55), rgb(35, 35, 35) 90%);
+  background-attachment: fixed;
+  transition: .5s;
+  /* background-color: rgb(28, 28, 28); */
+}
+
+.nav-toggle{
+  background-image: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar-change nav{
   background-color: rgb(28, 28, 28);
   box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+  background-image: none;
+  transition: all .5s;
 }
 
 .brand a{
@@ -208,14 +222,8 @@ li{
 
 /* ABOUT ME */
 #biography-banner{
-  background-image: url(img/gallery5.png);
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  border-radius: 0;
-  box-shadow: 0px 2px 4px #9b9b9b;
-  height: 300px;
-  text-align: center;
+  background-image: radial-gradient(circle at 60%, rgb(80, 80, 80) 10%, rgb(55, 55, 55), rgb(35, 35, 35) 90%);
+  background-attachment: fixed;
 }
 
 .biography-background {
@@ -250,9 +258,14 @@ li{
   position: relative;   
   top: 230px; 
   background-color: rgb(56, 119, 212);
+  transition: transform .5s;
 }
 .fixed-headshot #headshot{
-
+  position: fixed;
+  transform: scale(0.4);
+  margin-left: 20px;
+  top: 30px;
+  left: -70px;
 }
 
 .bio_container{
@@ -325,6 +338,11 @@ li{
 }
 
 /*LESSONS PAGE */
+#academy{
+  background-image: radial-gradient(circle at 60%, rgb(80, 80, 80) 10%, rgb(55, 55, 55), rgb(35, 35, 35) 90%);
+  background-attachment: fixed;
+}
+
 .academy-background {
   height: 300px;
   width: 100vw;
@@ -506,6 +524,11 @@ textarea:focus{
 
 
 /*MEDIA*/
+#media{
+  background-image: radial-gradient(circle at 60%, rgb(80, 80, 80) 10%, rgb(55, 55, 55), rgb(35, 35, 35) 90%);
+  background-attachment: fixed;
+}
+
 .media-background {
   height: 300px;
   width: 100vw;
@@ -704,7 +727,10 @@ textarea:focus{
 }
 
 /* DOWNLOADS */
-
+#downloads{
+  background-image: radial-gradient(circle at 60%, rgb(80, 80, 80) 10%, rgb(55, 55, 55), rgb(35, 35, 35) 90%);
+  background-attachment: fixed;
+}
 
 .downloads-background {
   height: 300px;
