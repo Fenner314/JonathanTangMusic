@@ -355,13 +355,12 @@ li{
   box-shadow: 0px 2px 4px #9b9b9b;
 }
 
-.jumbotron h1{
+.academy-logo{
   display: inline-block;
   padding: 30px;
-  color: rgb(247, 247, 247);
-  background-color: rgba(235, 235, 235, 0.4);
-  border: solid rgb(247, 247, 247) 10px;
-  /* border: solid rgb(255, 172, 66) 10px; */
+  color: white;
+  background-color: rgba(107, 166, 255, 0.4);
+  border: solid rgb(56, 119, 212) 10px;
   white-space: pre-line;
   position: relative;
   top: 95px;
@@ -373,7 +372,7 @@ li{
   word-break: break-all;
   transition: transform .5s;
 }
-.fixed-logo #academy-logo{
+.fixed-logo .academy-logo{
   position: fixed;
   transform: scale(0.4);
   margin-left: 20px;
@@ -382,8 +381,73 @@ li{
   word-spacing: 7em;
   width: 400px;
 }
-.unfix-logo #academy-logo{
+.unfix-logo .academy-logo{
   position: relative;
+}
+
+.quote-icon{
+  margin: 5px;
+  height: 40px;
+}
+
+.academy-quotes{
+  display: none;
+  transition: opacity 1s ease-in-out;
+}
+
+.academy-quotes-active{
+  position: relative;
+  height: 250px;
+  width: 450px;
+  background-color: rgba(107, 166, 255, 0.5);
+  border: solid rgb(56, 119, 212) 10px;
+  /* white-space: pre-line; */
+  display: inline-block;
+  top: 40px;
+  font-family: 'IBM Plex Serif', serif;
+  text-align: center;
+  transition: opacity 1s ease-in-out;
+}
+
+.academy-quotes-active p{
+  color: white;
+  position: absolute;
+  top: 50px;
+  padding: 10px 30px;
+  font-size: 13px;
+  font-weight: 400;
+  width: 100%;
+}
+
+.academy-quotes-active h6{
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  position: relative;
+  bottom: -110px;
+
+}
+
+.academy-quotes-active span{
+  display: inline-block;
+  width: 100%;
+}
+
+.academy-quotes-active h5{
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: rgb(35, 35, 35);
+  background-color: rgb(56, 119, 212);
+  width: fit-content;
+  position: relative;
+  bottom: -105px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4px 6px;
+  box-shadow: 8px 6px rgb(35, 35, 35);
 }
 
 .lessons{
@@ -997,7 +1061,7 @@ footer .copy{
     height: 300px;
   }
   #academy h1{
-    width: 400px;
+    width: 450px;
     word-spacing: 5em;
     top: 40px;
   }
