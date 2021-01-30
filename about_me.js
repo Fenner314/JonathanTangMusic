@@ -1,26 +1,22 @@
 //FIX HEADSHOT LOGO TO TOP CORNER ON SCROLL
 
-const headshot = document.getElementById('headshot');
-const topOfHeadshot = headshot.offsetTop;
-console.log(topOfHeadshot);
+const headshot = document.querySelector('.headshot-small');
+const bioBanner = document.querySelector('.biography-background');
+const activationHeight = bioBanner.offsetTop + bioBanner.offsetHeight;
 let mobile = window.matchMedia('(max-width: 900px)');
 
+headshot.style.opacity = 0;
+window.onload = () => {
+    headshot.classList.remove('no-transition');
+}
+
 const fixHeadshot = () => {
-    if (window.scrollY >= topOfHeadshot) {
-        document.body.classList.add('fixed-headshot');
+    if (window.scrollY >= activationHeight) {
+        headshot.style.opacity = 1;
     } else {
-        document.body.classList.remove('fixed-headshot');
+        headshot.style.opacity = 0;
     }
 };
 
 window.addEventListener('scroll', fixHeadshot);
 
-// window.onresize = () => {
-//     mobile = window.matchMedia('(max-width: 900px)');
-//     if (!mobile.matches) {    
-//         document.addEventListener('scroll', fixHeadshot);
-//     } else {
-//         document.removeEventListener('scroll', fixHeadshot);
-//         document.body.classList.remove('fixed-logo')
-//     }
-// }

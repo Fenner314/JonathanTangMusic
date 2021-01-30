@@ -32,8 +32,6 @@ const imgScroll = () => {
 
     const mobile = window.matchMedia('(max-width: 900px)');
 
-    console.log(rightArrow);
-
     rightArrow.onclick = function() {
         initial += amount;
         if (mobile.matches) {
@@ -242,6 +240,7 @@ const imgScroll = () => {
         counter = 10;
         sliderButtons[counter].classList.toggle('slider-button-active');
     };
+
     
     
     

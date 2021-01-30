@@ -104,3 +104,5 @@ const app = () => {
 };
 
 document.addEventListener('DOMContentLoaded', function(e) {app()})
+
+window.onresize = () => console.log(window.innerWidth);

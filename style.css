@@ -38,8 +38,8 @@ nav{
   z-index: 10;
   position: fixed;
   width: 100%;
-  background-image: radial-gradient(circle at 60%, rgb(80, 80, 80) 10%, rgb(55, 55, 55), rgb(35, 35, 35) 90%);
-  background-attachment: fixed;
+  /* background-image: radial-gradient(circle at 60%, rgb(80, 80, 80) 10%, rgb(55, 55, 55), rgb(35, 35, 35) 90%);
+  background-attachment: fixed; */
   transition: .5s;
   /* background-color: rgb(28, 28, 28); */
 }
@@ -179,31 +179,32 @@ li{
 
 
 /*HOMEPAGE MAIN CONTENT*/
-.container{
-  width: 100vw;
-  display: flex;
+.titles{
+  width: 35%;
+  color: rgb(247, 247, 247);
+  position: absolute;
+  top: 35%;
+  left: 15%;
 }
+
+/* .home-img{
+  max-width: 80%;
+  height: calc(80vh - 100px);
+  position: absolute;
+  bottom: 74px;
+  right: 10%;
+}  */
+.home-img{
+  /* max-width: 80%; */
+  height: 80vh;
+  position: absolute;
+  bottom: 54px;
+  right: 15%;
+} 
 
 .titles{
-  position: absolute;
-  bottom: 200px;
-  color: rgb(247, 247, 247);
-}
-
-.container img{
-  position: absolute; 
-  bottom: 0;
-  left: 40vw;
-  padding-bottom: 73px;
-  width: 650px;
-  height: auto;
-  z-index: -1;
-  /* overflow: unset; */
-}
-
-.titles h1, p{
+  font-family: 'Open Sans', Helvetica, sans-serif;    
   white-space: nowrap;
-  padding-left: 40px;
 }
 
 .titles h1{
@@ -212,33 +213,28 @@ li{
 }
 
 .titles p{
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 1.3px;
   position: relative;
-  left: 13px;
-  /* right: 5px; */
+  font-weight: 300;
 }
 
 
 /* ABOUT ME */
-#biography-banner{
-  background-image: radial-gradient(circle at 60%, rgb(80, 80, 80) 10%, rgb(55, 55, 55), rgb(35, 35, 35) 90%);
-  background-attachment: fixed;
-}
-
 .biography-background {
-  height: 300px;
-  width: 100vw;
-  position: absolute;
-  left: 0;
-  top: 80px;
   object-fit: cover;
-  object-position: bottom;
-  border-radius: 0;
-  box-shadow: 0px 2px 4px #9b9b9b;
+  object-position: 50% 60%;
 }
 
-#biography-banner h2{
+.biography-banner{
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 300px;
+}
+
+.biography-banner h2{
   font-size: 36px;
   font-weight: 300;
   color: rgb(247, 247, 247);    
@@ -256,16 +252,22 @@ li{
   border-radius: 100px;
   z-index: 2;
   position: relative;   
-  top: 230px; 
+  top: 280px; 
   background-color: rgb(56, 119, 212);
-  transition: transform .5s;
 }
-.fixed-headshot #headshot{
+.headshot-small{
+  display: inline-block;
+  width: 80px;
+  border: 2px solid rgb(56, 119, 212);
+  border-radius: 50%;
   position: fixed;
-  transform: scale(0.4);
-  margin-left: 20px;
-  top: 30px;
-  left: -70px;
+  top: 95px;
+  left: 20px;
+  transition: opacity .5s;
+}
+
+.headshot-small-fixed{
+  opacity: 1;
 }
 
 .bio_container{
@@ -345,7 +347,7 @@ li{
 
 .academy-background {
   height: 300px;
-  width: 100vw;
+  width: 100%;
   position: absolute;
   left: 0;
   top: 80px;
@@ -372,17 +374,33 @@ li{
   word-break: break-all;
   transition: transform .5s;
 }
-.fixed-logo .academy-logo{
+
+.academy-logo-small{
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  background-color: rgba(107, 166, 255, 0.4);
+  border: solid rgb(56, 119, 212) 8px;
+  white-space: pre-line;
   position: fixed;
-  transform: scale(0.4);
-  margin-left: 20px;
-  top: 40px;
-  left: -100px;
-  word-spacing: 7em;
-  width: 400px;
+  top: 95px;
+  left: 20px;
+  font-weight: 400;
+  font-family: 'IBM Plex Serif', serif;
+  font-style: italic;
+  font-size: 28px;
+  letter-spacing: 2px;
+  transition: opacity .5s;
+  width: 200px;
+  word-spacing: 5em;
 }
-.unfix-logo .academy-logo{
-  position: relative;
+
+.academy-logo-small-fixed{
+  opacity: 1;
+}
+
+.no-transition{
+  transition: none;
 }
 
 .quote-icon{
@@ -407,6 +425,9 @@ li{
   font-family: 'IBM Plex Serif', serif;
   text-align: center;
   transition: opacity 1s ease-in-out;
+}
+.academy-quotes-active:hover{
+  cursor: pointer;
 }
 
 .academy-quotes-active p{
@@ -600,7 +621,7 @@ textarea:focus{
   left: 0;
   top: 80px;
   object-fit: cover;
-  object-position: 50% 40%;
+  object-position: 50% 30%;
   border-radius: 0;
   box-shadow: 0px 2px 4px #9b9b9b;
 }
@@ -803,7 +824,7 @@ textarea:focus{
   left: 0;
   top: 80px;
   object-fit: cover;
-  object-position: bottom;
+  object-position: 50% 23%;
   border-radius: 0;
   box-shadow: 0px 2px 4px #9b9b9b;
 }
@@ -829,21 +850,20 @@ textarea:focus{
 }
 
 /* CONTACT */
-#contact{
-  background-image: url(img/skyline.jpg);
-  height: 300px;
-}
-
-.contact-background {
+.banner {
   height: 300px;
   width: 100vw;
   position: absolute;
   left: 0;
   top: 80px;
   object-fit: cover;
-  object-position: 0% 50%;
   border-radius: 0;
   box-shadow: 0px 2px 4px #9b9b9b;
+}
+
+.contact-background{
+  object-fit: cover;
+  object-position: 0% 50%;
 }
 
 .jumbotron{
@@ -869,7 +889,7 @@ textarea:focus{
   padding-bottom: 30px;
 }
 
-div .contact_me h2{
+.contact_me h2{
   position: absolute;
   left: 0;
   right: 0;
@@ -978,6 +998,11 @@ footer .copy{
       width: 60%;
   }
 
+  /* HOME */
+  .titles{
+    left: 10%
+  }
+
   /* MEDIA */
   .recording-grid-container{
     width: 80%;
@@ -1027,21 +1052,24 @@ footer .copy{
 
   /* HOME  */
   .container{
-    width: 80%;
-    justify-content: center;
-    min-height: 500px;
+    width: 100%;
+    text-align: center;
+    position: relative;
   }
   .container img{ 
-    width: 550px;
-    left: 150px;
-    right: 0px;
-    bottom: -90px;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    bottom: -540px;
+    left: 50%;
+    transform: translate(-50%);
   }
   .titles{
-    position: relative;
+    width: 100%;
+    position: fixed;
     top: 90px;
+    left: 0;
+  }
+  .titles p{
+    text-align: center;
   }
   .footer_home{
     height: 90px;
@@ -1060,11 +1088,30 @@ footer .copy{
     background-position: 80% 60%;
     height: 300px;
   }
-  #academy h1{
+  .academy-logo{
     width: 450px;
     word-spacing: 5em;
     top: 40px;
   }
+  .academy-logo-small{
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    background-color: rgba(107, 166, 255, 0.4);
+    border: solid rgb(56, 119, 212) 8px;
+    white-space: pre-line;
+    position: fixed;
+    top: 95px;
+    left: 20px;
+    font-weight: 400;
+    font-family: 'IBM Plex Serif', serif;
+    font-style: italic;
+    font-size: 28px;
+    letter-spacing: 2px;
+    transition: opacity .5s;
+    width: 200px;
+    word-spacing: 2em;
+  }  
   .lessons h2{
     font-size: 28px;
   }
@@ -1073,9 +1120,6 @@ footer .copy{
 }
   .poster img{
   width: 78%;
-}
-  .form{
-    max-width: 78%;
 }
 
   /* MEDIA */
@@ -1136,13 +1180,13 @@ footer .copy{
     position: relative;
     top: -20px;
   }
-  .slider-button{
+  /* .slider-button{
     display: inline-block;
     height: 5px;
     width: 20px;
     background-color: rgb(247, 247, 247);
     opacity: 0.65;
-  }
+  } */
   .arrow-container{
     width: 300px;
     display: flex;
@@ -1152,43 +1196,8 @@ footer .copy{
   }
   .arrow-container img{
     width: 20px;
-    z-index: 15;
+    z-index: 4;
   }
-    /* #slider-image-1:target ~ .image-container{
-    left: 0px;
-  }
-  #slider-image-2:target ~ .image-container{
-    left: -400px;
-  }
-  #slider-image-3:target ~ .image-container{
-    left: -800px;
-  }
-  #slider-image-4:target ~ .image-container{
-    left: -1200px;
-  }
-  #slider-image-5:target ~ .image-container{
-    left: -1600px;
-  }
-  #slider-image-6:target ~ .image-container{
-    left: -2000px;
-  }
-  #slider-image-7:target ~ .image-container{
-    left: -2400px;
-  }
-  #slider-image-8:target ~ .image-container{
-    left: -2800px;
-  }
-  #slider-image-9:target ~ .image-container{
-    left: -3200px;
-  }
-  #slider-image-10:target ~ .image-container{
-    left: -3600px;
-  }
-  #slider-image-11:target ~ .image-container{
-    left: -4000px;
-  } */
-
-
   /* CONTACT */
   .contact_me{
     text-align: center;
@@ -1199,5 +1208,18 @@ footer .copy{
   .copy{
     font-size: 14px;
   }  
+
+  .footer-lessons{
+    z-index: 9;
+  }
 } 
 
+@media screen and (max-width: 575px){
+  .academy-quotes-active{
+    position: relative;
+    top: 72px;
+  }
+  #academy h1{
+    top: 72px;
+  }
+}
