@@ -30,11 +30,14 @@ const imgScroll = () => {
     let initial = 0;
     let counter = 0;
 
-    const mobile = window.matchMedia('(max-width: 900px)');
+    const tablet = window.matchMedia('(max-width: 900px)');
+    const mobile = window.matchMedia('(max-width: 575px)');
 
     rightArrow.onclick = function() {
         initial += amount;
         if (mobile.matches) {
+            imgContainer.style.transform = 'translateX(-' + (initial / 3) + 'px)';
+        } else if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-' + (initial / 2) + 'px)';
         } else {
             imgContainer.style.transform = 'translateX(-' + initial + 'px)';
@@ -55,6 +58,8 @@ const imgScroll = () => {
     leftArrow.onclick = function() {
         initial -= amount;
         if (mobile.matches) {
+            imgContainer.style.transform = 'translateX(-' + (initial / 3) + 'px)';
+        } else if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-' + (initial / 2) + 'px)';
         } else {
             imgContainer.style.transform = 'translateX(-' + initial + 'px)';
@@ -76,6 +81,8 @@ const imgScroll = () => {
     btnOne.onclick = function() {
         if (mobile.matches) {
             imgContainer.style.transform = 'translateX(0px)';
+        }else if (tablet.matches) {
+            imgContainer.style.transform = 'translateX(0px)';
         } else {
             imgContainer.style.transform = 'translateX(0px)';
         };
@@ -93,6 +100,8 @@ const imgScroll = () => {
     
     btnTwo.onclick = function() {
         if (mobile.matches) {
+            imgContainer.style.transform = 'translateX(-200px)';
+        }else if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-300px)';
         } else {
             imgContainer.style.transform = 'translateX(-600px)';
@@ -108,6 +117,8 @@ const imgScroll = () => {
     
     btnThree.onclick = function() {
         if (mobile.matches) {
+            imgContainer.style.transform = 'translateX(-400px)';
+        }else if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-600px)';
         } else {
             imgContainer.style.transform = 'translateX(-1200px)';
@@ -123,6 +134,8 @@ const imgScroll = () => {
     
     btnFour.onclick = function() {
         if (mobile.matches) {
+            imgContainer.style.transform = 'translateX(-600px)';
+        }else if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-900px)';
         } else {
             imgContainer.style.transform = 'translateX(-1800px)';
@@ -138,6 +151,8 @@ const imgScroll = () => {
     
     btnFive.onclick = function() {
         if (mobile.matches) {
+            imgContainer.style.transform = 'translateX(-800px)';
+        }else if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-1200px)';
         } else {
             imgContainer.style.transform = 'translateX(-2400px)';
@@ -153,6 +168,8 @@ const imgScroll = () => {
     
     btnSix.onclick = function() {
         if (mobile.matches) {
+            imgContainer.style.transform = 'translateX(-1000px)';
+        }else if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-1500px)';
         } else {
             imgContainer.style.transform = 'translateX(-3000px)';
@@ -168,6 +185,8 @@ const imgScroll = () => {
     
     btnSeven.onclick = function() {
         if (mobile.matches) {
+            imgContainer.style.transform = 'translateX(-1200px)';
+        }else if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-1800px)';
         } else {
             imgContainer.style.transform = 'translateX(-3600px)';
@@ -183,6 +202,8 @@ const imgScroll = () => {
     
     btnEight.onclick = function() {
         if (mobile.matches) {
+            imgContainer.style.transform = 'translateX(-1400px)';
+        }else if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-2100px)';
         } else {
             imgContainer.style.transform = 'translateX(-4200px)';
@@ -198,6 +219,8 @@ const imgScroll = () => {
     
     btnNine.onclick = function() {
         if (mobile.matches) {
+            imgContainer.style.transform = 'translateX(-1600px)';
+        }else if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-2400px)';
         } else {
             imgContainer.style.transform = 'translateX(-4800px)';
@@ -213,6 +236,8 @@ const imgScroll = () => {
     
     btnTen.onclick = function() {
         if (mobile.matches) {
+            imgContainer.style.transform = 'translateX(-1800px)';
+        }else if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-2700px)';
         } else {
             imgContainer.style.transform = 'translateX(-5400px)';
@@ -228,6 +253,8 @@ const imgScroll = () => {
     
     btnEleven.onclick = function() {
         if (mobile.matches) {
+            imgContainer.style.transform = 'translateX(-2000px)';
+        }else if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-3000px)';
         } else {
             imgContainer.style.transform = 'translateX(-6000px)';

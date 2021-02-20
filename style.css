@@ -7,6 +7,7 @@
 /*GENERAL*/
 html{
   height: 100%;
+  width: 100%;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -26,6 +27,7 @@ body{
   position: relative;
   min-height: 100%;
   padding-bottom: 90px;
+  width: 100vw;
 }
 
 
@@ -156,6 +158,7 @@ li{
   overflow: hidden;
 }
 
+
 @keyframes navLinkFade{
   from{
       opacity: 0;
@@ -184,7 +187,9 @@ li{
   color: rgb(247, 247, 247);
   position: absolute;
   top: 35%;
-  left: 15%;
+  left: 11%;
+  font-family: 'Open Sans', Helvetica, sans-serif;    
+  white-space: nowrap;
 }
 
 /* .home-img{
@@ -197,23 +202,20 @@ li{
 .home-img{
   /* max-width: 80%; */
   height: 80vh;
-  position: absolute;
+  position: fixed;
   bottom: 54px;
-  right: 15%;
+  right: 8%;
 } 
 
-.titles{
-  font-family: 'Open Sans', Helvetica, sans-serif;    
-  white-space: nowrap;
-}
-
 .titles h1{
-  font-size: 48px;
+  /* font-size: 48px; */
+  font-size: 4vw;
   font-weight: 300;
 }
 
 .titles p{
-  font-size: 20px;
+  /* font-size: 20px; */
+  font-size: 1.5vw;
   letter-spacing: 1.3px;
   position: relative;
   font-weight: 300;
@@ -276,9 +278,10 @@ li{
 
 .bio_quote, .bio{
   color: rgb(247, 247, 247);
-  max-width: 75%;
+  max-width: 75ch;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 4rem;
 }
 
 .bio_quote{
@@ -426,9 +429,6 @@ li{
   text-align: center;
   transition: opacity 1s ease-in-out;
 }
-.academy-quotes-active:hover{
-  cursor: pointer;
-}
 
 .academy-quotes-active p{
   color: white;
@@ -484,10 +484,11 @@ li{
 }
 
 .lessons h2{
-  padding: 40px 0;
+  /* padding: 40px 0; */
   color: rgb(247, 247, 247);
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
+  margin-bottom: 35px;
 }
 
 .lessons p{
@@ -495,8 +496,6 @@ li{
   padding-bottom: 20px;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  position: relative; 
-  right: 20px;
 }
 
 .poster{
@@ -508,105 +507,6 @@ li{
 .poster img{
   width: 48%;
 }
-
-.form{
-  text-align: center;
-  max-width: 48%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.form_info{
-  text-align: left;
-}
-
-input{
-  height: 40px;
-  width: 100%;
-  border-radius: 5px;
-  padding: 12px 10px;
-}
-
-textarea{
-  border-radius: 5px;
-  padding: 12px 10px;
-  width: 100%;
-}
-
-label{
-  color: rgb(247, 247, 247);
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-}
-
-.name{
-  text-align: left;
-}
-
-.name_label{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-}
-
-#lastname{
-  position: relative;
-  left: 4.5%;
-}
-
-.name_input{
-  display: flex;
-  justify-content: space-between;
-}
-
-#fname{
-  width: 48%;
-}
-
-#lname{
-  width: 48%;
-}
-
-#exp{
-  width: 100%;
-}
-
-input:focus{
-  outline: none;
-  box-shadow: 1px 2px rgb(56, 119, 212);
-  transform: translateY(-2px);
-  transform: translateX(-1px);
-}
-
-textarea{
-resize: none;
-}
-
-textarea:focus{
-  outline: none;
-  box-shadow: 2px 3px rgb(56, 119, 212);
-  transform: translateY(-3px);
-  transform: translateX(-2px);
-}
-
-#send{
-  box-shadow: 1px 2px rgb(56, 119, 212);
-  width: 20%;
-  margin-bottom: 30px;
-  padding: 0 0;
-}
-
-#send:focus{
-  outline: none;
-}
-
-#send:active{
-  transform: translateY(2px);
-  transform: translateX(1px);
-  box-shadow: none;
-}
-
-
 
 /*MEDIA*/
 #media{
@@ -903,8 +803,6 @@ textarea:focus{
 #contact-form p{
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  position: relative;
-  right: 20px;
 }
 
 #contact-form {
@@ -912,19 +810,107 @@ textarea:focus{
   top: 420px;
 }
 
-#map{
-  height: 400px;
-  width: 78%;
-  position: relative;
-  top: 400px;
+.form{
+  text-align: center;
+  max-width: 48%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
 }
+
+.form_info{
+  text-align: left;
+}
+
+input{
+  height: 40px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 12px 10px;
+}
+
+textarea{
+  border-radius: 5px;
+  padding: 12px 10px;
+  width: 100%;
+}
+
+label{
+  color: rgb(247, 247, 247);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.name{
+  text-align: left;
+}
+
+.name_label{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+#lastname{
+  position: relative;
+  left: 4.5%;
+}
+
+.name_input{
+  display: flex;
+  justify-content: space-between;
+}
+
+#fname{
+  width: 48%;
+}
+
+#lname{
+  width: 48%;
+}
+
+#exp{
+  width: 100%;
+}
+
+input:focus{
+  outline: none;
+  box-shadow: 1px 2px rgb(56, 119, 212);
+  transform: translateY(-2px);
+  transform: translateX(-1px);
+}
+
+textarea{
+resize: none;
+}
+
+textarea:focus{
+  outline: none;
+  box-shadow: 2px 3px rgb(56, 119, 212);
+  transform: translateY(-3px);
+  transform: translateX(-2px);
+}
+
+#send{
+  box-shadow: 1px 2px rgb(56, 119, 212);
+  width: 20%;
+  margin-bottom: 30px;
+  padding: 0 0;
+}
+
+#send:focus{
+  outline: none;
+}
+
+#send:active{
+  transform: translateY(2px);
+  transform: translateX(1px);
+  box-shadow: none;
+}
+
 
 /*FOOTER*/
 .footer{
-  height: 90px;
+  height: 100px;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -987,6 +973,7 @@ footer .copy{
 .footer p{
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
+  padding: 0 10px;
 }
 
 
@@ -999,8 +986,17 @@ footer .copy{
   }
 
   /* HOME */
+  .home-img {
+    right: 0%;
+  }
   .titles{
     left: 10%
+  }
+  .titles h1 {
+    font-size: 5vw;
+  }
+  .titles p {
+    font-size: 1.8vw;
   }
 
   /* MEDIA */
@@ -1031,6 +1027,7 @@ footer .copy{
     align-items: center;
     width: 50%;
     pointer-events: none;
+    padding: 20px;
     /* transform: translateX(100%); */
     /* transition: background-color 0.5s ease-in; */
   }
@@ -1056,9 +1053,9 @@ footer .copy{
     text-align: center;
     position: relative;
   }
-  .container img{ 
+  .home-img{ 
     position: absolute;
-    bottom: -540px;
+    bottom: -500px;
     left: 50%;
     transform: translate(-50%);
   }
@@ -1082,6 +1079,11 @@ footer .copy{
     border-top: 1px solid rgb(247, 247, 247);
     text-align: center;
   }    
+
+  /* ABOUT */
+  .headshot-small {
+    display: none;
+  }
 
   /* LESSONS */
   #academy{
@@ -1210,16 +1212,118 @@ footer .copy{
   }  
 
   .footer-lessons{
-    z-index: 9;
+    z-index: 99999999;
   }
 } 
 
 @media screen and (max-width: 575px){
+  .brand a {
+    font-size: 1.3rem;
+  }
+
+  #headshot {
+    width: 150px;
+  }
+  .sub-title {
+    font-size: 22px;
+  }
+  .paragraph {
+    font-size: 12px;
+  }
+
   .academy-quotes-active{
     position: relative;
     top: 72px;
+    transform: scale(0.75);
   }
   #academy h1{
     top: 72px;
   }
+  .lessons h2 {
+    font-size: 22px;
+  }
+
+  .video-card{
+    width: 200px;
+  }
+  .audio-card{
+    width: 200px;
+  }
+  .slide-container{
+    display: block;
+    width: 200px;
+    height: 150px;
+  }
+  .image-container{
+    width: 2200px;
+    height: 150px;
+    position: relative;
+    transition-property: all;
+    transition: ease-in-out 750ms;
+    /* transition: left 2s;
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s; */
+  }
+  .slider-image{
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+  }
+  #image-2{
+    object-position: 50% 65%;
+  }
+  #image-6{
+    object-position: left 40%;
+  }
+  #image-8{
+    object-position: left 32%;
+  }
+  #image-10{
+    object-position: left 47%;
+  }
+  .button-container{
+    position: relative;
+    top: -20px;
+  }
+  .slider-button{
+    display: inline-block;
+    height: 3px;
+    width: 13px;
+    background-color: rgb(247, 247, 247);
+    opacity: 0.65;
+  }
+  .slider-button-active{
+    opacity: 1;
+    height: 3.5px;
+    width: 13px;
+    background-color: rgb(255, 255, 255);
+  }  
+  .arrow-container{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 55px;
+  }
+  .arrow-container img{
+    width: 20px;
+    z-index: 4;
+  }
+
+  .credit h4 {
+    font-size: 16px;
+    margin: 0 10px 40px 10px;
+  }
+
+  .form {
+    max-width: 80%;
+  }
+  #contact-form p {
+    font-size: 14px;
+  }
 }
+
