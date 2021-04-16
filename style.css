@@ -11,6 +11,7 @@ html{
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  overflow-x: hidden !important;
 }
 
 body{
@@ -19,7 +20,7 @@ body{
   background-image: radial-gradient(circle at 60%, rgb(80, 80, 80) 10%, rgb(55, 55, 55), rgb(35, 35, 35) 90%);
   background-attachment: fixed;
   height: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   line-height: 1.6;
 }
 
