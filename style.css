@@ -57,7 +57,7 @@ nav{
   justify-content: space-around;
   align-items: center;
   height: 80px;
-  z-index: 10;
+  z-index: 10000000;
   position: fixed;
   width: 100%;
 
@@ -614,7 +614,8 @@ li{
 }
 
 #curator-feed-grid-carousel {
-  padding: 0 80px 80px 60px;
+  padding: 0 60px 40px 60px ;
+  margin-bottom: 50px;
   width: 100%;
 }
 
