@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="all">
-        <nav id="myNav">
+        <nav class="myNav">
             <div class="brand">
                 <a href="home.html">Jonathan Tang Music</a>
             </div>
@@ -70,7 +70,19 @@
                         <p>Event/description/Time Stamps?</p>
                     </div>
                 </section>
-
+                
+<!-- Place <div> tag where you want the feed to appear -->
+    <div id="curator-feed-grid-carousel"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
+    <!-- The Javascript can be moved to the end of the html page before the </body> tag -->
+    <script type="text/javascript">
+    /* curator-feed-grid-carousel */
+    (function(){
+    var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
+    i.src = "https://cdn.curator.io/published/9b2fdac3-1fed-4305-94d4-52715ef31f91_ewm3d99g.js";
+    e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+    })();
+    </script>
+    
                 <!-- IMAGE CAROUSEL -->
                 <div class="slide-container">
                         <span id="slider-image-1"></span>
@@ -119,6 +131,7 @@
                     <h4>Professional Photos Courtesy of Sean Reynolds Photography</h4>
                 </section>
             </div>
+
             <footer class="footer">
                 <div class="social">
                     <a href="https://www.facebook.com/jaytangmusic" target="_blank"><i class="fab fa-facebook-f fa-lg"></i></a>

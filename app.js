@@ -3,7 +3,7 @@ const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
-    const navBar = document.getElementById('myNav');
+    const navBar = document.querySelector('.myNav');
     const tint = document.querySelector('.tint');
     const body = document.body;
     const notNav = document.querySelector('.not-nav');

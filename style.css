@@ -5,6 +5,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 /*GENERAL*/
+:root {
+  --mainAccent: rgb(56, 119, 212);
+  --darkGray: rgb(28, 28, 28);
+  --gradient: radial-gradient(circle at 60%, rgb(80, 80, 80) 10%, rgb(55, 55, 55), rgb(28, 28, 28) 90%);
+}
+
 html{
   height: 100%;
   width: 100%;
@@ -17,11 +23,24 @@ html{
 body{
   font-size: 16px;
   font-family: 'Open Sans', Helvetica, sans-serif;  
-  background-image: radial-gradient(circle at 60%, rgb(80, 80, 80) 10%, rgb(55, 55, 55), rgb(35, 35, 35) 90%);
+  background-image: var(--gradient);
+  /* background-image: url(./img/TangPortrait-132.jpg);
+  background-size: cover; */
   background-attachment: fixed;
   height: 100%;
   overflow-x: hidden !important;
   line-height: 1.6;
+}
+
+.body-home {
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, .5), 
+      rgba(0, 0, 0, .5)
+    ), 
+    url(./img/TangPortrait-132.jpg);
+  background-size: cover;
+  background-position: 50% 10%;
 }
 
 .all{
@@ -41,10 +60,8 @@ nav{
   z-index: 10;
   position: fixed;
   width: 100%;
-  /* background-image: radial-gradient(circle at 60%, rgb(80, 80, 80) 10%, rgb(55, 55, 55), rgb(35, 35, 35) 90%);
-  background-attachment: fixed; */
+
   transition: .5s;
-  /* background-color: rgb(28, 28, 28); */
 }
 
 .nav-toggle{
@@ -53,7 +70,7 @@ nav{
 }
 
 .navbar-change nav{
-  background-color: rgb(28, 28, 28);
+  background-color: var(--darkGray);
   box-shadow: 0 2px rgba(0, 0, 0, 0.1);
   background-image: none;
   transition: all .5s;
@@ -61,13 +78,13 @@ nav{
 
 .brand a{
   display: inline-flex;
-  color: rgb(56, 119, 212);
+  color: var(--mainAccent);
   font-size: 2rem;
   text-decoration: none;
   font-family: 'Frank Ruhl Libre', serif;
   font-weight: 400;
+  text-shadow: 1px 1px 1px black;
   position: relative;
-  /* bottom: 2vh; */
   z-index: 50;
   white-space: nowrap;
   margin-bottom: 0;
@@ -91,19 +108,27 @@ li{
 }
 
 .nav-links a{
-  color: rgb(218, 218, 218);
+  color: white;
   text-decoration: none;
   border-bottom: 3px solid transparent;
+  letter-spacing: .05em;
+  font-weight: 500;
+
   transition: 0.25s;
 }
 
+/* #nav-links-home a {
+  color: var(--darkGray);
+  
+} */
+
 .nav-links a:hover{
-  border-bottom: 3px solid rgb(56, 119, 212);
+  border-bottom: 3px solid var(--mainAccent);
   transition: 0.5s;
 }
 
 .nav-links a.active{
-  border-bottom: 3px solid rgb(56, 119, 212);
+  border-bottom: 3px solid var(--mainAccent);
 }
 
 .tint-active{
@@ -113,7 +138,7 @@ li{
   left: 0px;
   top: 0px; 
   opacity: 0.6;
-  background-color: rgb(28, 28, 28);
+  background-color: var(--darkGray);
   pointer-events: none;
   z-index: 3;
   transition: background-color 0.5s ease-in;
@@ -143,15 +168,15 @@ li{
 .burger div{
   width: 25px;
   height: 3px;
-  background-color: rgb(247, 247, 247);
-  border: 2px, solid, rgb(247, 247, 247);
+  background-color: white;
+  border: 2px, solid, white;
   z-index: 4;
   margin: 5px;
   transition: all 0.5s ease;
 }
 
 .navbar-active{
-  background-color: rgb(28, 28, 28);
+  background-color: var(--darkGray);
   transition: background-color 0.5s ease-in-out;
 }
 
@@ -183,9 +208,13 @@ li{
 
 
 /*HOMEPAGE MAIN CONTENT*/
+.container {
+  /* background-image: url(./img/HomeBack.jpg) !important; */
+  background-color: red;
+}
+
 .titles{
   width: 35%;
-  color: rgb(247, 247, 247);
   position: absolute;
   top: 35%;
   left: 11%;
@@ -212,6 +241,8 @@ li{
   /* font-size: 48px; */
   font-size: 4vw;
   font-weight: 300;
+  color: white;
+  text-shadow: 2px 2px 2px black;
 }
 
 .titles p{
@@ -219,7 +250,10 @@ li{
   font-size: 1.5vw;
   letter-spacing: 1.3px;
   position: relative;
-  font-weight: 300;
+  font-weight: 500;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  /* color: var(--darkGray); */
 }
 
 
@@ -240,7 +274,7 @@ li{
 .biography-banner h2{
   font-size: 36px;
   font-weight: 300;
-  color: rgb(247, 247, 247);    
+  color: white;    
   position: absolute;
   top: 200px;
   left: 0;
@@ -251,17 +285,17 @@ li{
 
 #headshot{
   width: 200px;
-  border: 2px solid rgb(56, 119, 212);
+  border: 2px solid var(--mainAccent);
   border-radius: 100px;
   z-index: 2;
   position: relative;   
   top: 280px; 
-  background-color: rgb(56, 119, 212);
+  background-color: var(--mainAccent);
 }
 .headshot-small{
   display: inline-block;
   width: 80px;
-  border: 2px solid rgb(56, 119, 212);
+  border: 2px solid var(--mainAccent);
   border-radius: 50%;
   position: fixed;
   top: 95px;
@@ -278,7 +312,7 @@ li{
 }
 
 .bio_quote, .bio{
-  color: rgb(247, 247, 247);
+  color: white;
   max-width: 75ch;
   margin-left: auto;
   margin-right: auto;
@@ -314,7 +348,7 @@ li{
 }
 
 .resume-pdf{
-  color: rgb(218, 218, 218);
+  color: white;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -322,14 +356,14 @@ li{
   width: 100px;
   padding: 10px 30px;
   border-radius: 5px;
-  background-image: linear-gradient(135deg, rgb(24, 73, 179), rgb(56, 119, 212));
+  background-image: linear-gradient(135deg, rgb(24, 73, 179), var(--mainAccent));
   transition: .3s;
   /* box-shadow: 2px 2px 20px #9b9b9b; */
 }
 
 .resume a:hover{
   text-decoration: none;
-  color: rgb(218, 218, 218);
+  color: white;
   font-size: 30px;
   box-shadow: 2px 2px 20px #9b9b9b;
   transition: .3s;
@@ -345,7 +379,7 @@ li{
 
 /*LESSONS PAGE */
 #academy{
-  background-image: radial-gradient(circle at 60%, rgb(80, 80, 80) 10%, rgb(55, 55, 55), rgb(35, 35, 35) 90%);
+  background-image: var(--gradient);
   background-attachment: fixed;
 }
 
@@ -366,7 +400,7 @@ li{
   padding: 30px;
   color: white;
   background-color: rgba(107, 166, 255, 0.4);
-  border: solid rgb(56, 119, 212) 10px;
+  border: solid var(--mainAccent) 10px;
   white-space: pre-line;
   position: relative;
   top: 95px;
@@ -384,7 +418,7 @@ li{
   padding: 10px;
   color: white;
   background-color: rgba(107, 166, 255, 0.4);
-  border: solid rgb(56, 119, 212) 8px;
+  border: solid var(--mainAccent) 8px;
   white-space: pre-line;
   position: fixed;
   top: 95px;
@@ -422,7 +456,7 @@ li{
   height: 250px;
   width: 450px;
   background-color: rgba(107, 166, 255, 0.5);
-  border: solid rgb(56, 119, 212) 10px;
+  border: solid var(--mainAccent) 10px;
   /* white-space: pre-line; */
   display: inline-block;
   top: 40px;
@@ -459,8 +493,8 @@ li{
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 1px;
-  color: rgb(35, 35, 35);
-  background-color: rgb(56, 119, 212);
+  color: var(--darkGray);
+  background-color: var(--mainAccent);
   width: fit-content;
   position: relative;
   bottom: -105px;
@@ -469,7 +503,7 @@ li{
   margin-left: auto;
   margin-right: auto;
   padding: 4px 6px;
-  box-shadow: 8px 6px rgb(35, 35, 35);
+  box-shadow: 8px 6px var(--darkGray);
 }
 
 .lessons{
@@ -486,14 +520,14 @@ li{
 
 .lessons h2{
   /* padding: 40px 0; */
-  color: rgb(247, 247, 247);
+  color: white;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   margin-bottom: 35px;
 }
 
 .lessons p{
-  color: rgb(247, 247, 247);
+  color: white;
   padding-bottom: 20px;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -511,7 +545,7 @@ li{
 
 /*MEDIA*/
 #media{
-  background-image: radial-gradient(circle at 60%, rgb(80, 80, 80) 10%, rgb(55, 55, 55), rgb(35, 35, 35) 90%);
+  background-image: var(--gradient);
   background-attachment: fixed;
 }
 
@@ -536,7 +570,7 @@ li{
   top: 200px;
   font-size: 36px;
   font-weight: 300;
-  color: rgb(247, 247, 247);
+  color: white;
 }
 
 .recording-grid-container{
@@ -551,7 +585,7 @@ li{
 }
 
 .video-card{
-  background-color: rgb(56, 119, 212);
+  background-color: var(--mainAccent);
   width: 300px;
   margin-bottom: 35px;
   margin-top: 35px;
@@ -561,7 +595,7 @@ li{
 }
 
 .audio-card{
-  background-color: rgb(56, 119, 212);
+  background-color: var(--mainAccent);
   width: 300px;
   margin-bottom: 35px;
   margin-top: 35px;
@@ -582,15 +616,20 @@ li{
 }
 
 .video-card h3, h5, p{
-  color: rgb(247, 247, 247);
+  color: white;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
 
 .audio-card h3, h5, p{
-  color: rgb(247, 247, 247);
+  color: white;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
+}
+
+#curator-feed-grid-carousel {
+  padding: 0 80px 80px 60px;
+  width: 100%;
 }
 
 .slide-container{
@@ -651,7 +690,7 @@ li{
   display: inline-block;
   height: 5px;
   width: 20px;
-  background-color: rgb(247, 247, 247);
+  background-color: white;
   opacity: 0.65;
 }
 
@@ -664,7 +703,7 @@ li{
 .slider-button-active{
   opacity: 1;
   height: 5.5px;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
 }
 
 .slider-button:hover{
@@ -705,7 +744,7 @@ li{
 }
 
 .credit h4{
-  color: rgb(247, 247, 247);
+  color: white;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
@@ -714,7 +753,7 @@ li{
 
 /* DOWNLOADS */
 #downloads{
-  background-image: radial-gradient(circle at 60%, rgb(80, 80, 80) 10%, rgb(55, 55, 55), rgb(35, 35, 35) 90%);
+  background-image: var(--gradient);
   background-attachment: fixed;
 }
 
@@ -739,7 +778,7 @@ li{
   top: 200px;
   font-size: 36px;
   font-weight: 300;
-  color: rgb(247, 247, 247);
+  color: white;
 }
 
 .coming-soon {
@@ -786,7 +825,7 @@ li{
 }
 
 .contact_me h2, p{
-  color: rgb(247, 247, 247);
+  color: white;
   padding-bottom: 30px;
 }
 
@@ -836,7 +875,7 @@ textarea{
 }
 
 label{
-  color: rgb(247, 247, 247);
+  color: white;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
@@ -875,7 +914,7 @@ label{
 
 input:focus{
   outline: none;
-  box-shadow: 1px 2px rgb(56, 119, 212);
+  box-shadow: 1px 2px var(--mainAccent);
   transform: translateY(-2px);
   transform: translateX(-1px);
 }
@@ -886,13 +925,13 @@ resize: none;
 
 textarea:focus{
   outline: none;
-  box-shadow: 2px 3px rgb(56, 119, 212);
+  box-shadow: 2px 3px var(--mainAccent);
   transform: translateY(-3px);
   transform: translateX(-2px);
 }
 
 #send{
-  box-shadow: 1px 2px rgb(56, 119, 212);
+  box-shadow: 1px 2px var(--mainAccent);
   width: 20%;
   margin-bottom: 30px;
   padding: 0 0;
@@ -915,10 +954,10 @@ textarea:focus{
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: rgb(28, 28, 28);
+  background-color: var(--darkGray);
   /* justify-content: center; */
-  color: rgb(247, 247, 247);
-  border-top: 1px solid rgb(247, 247, 247);
+  color: white;
+  border-top: 1px solid white;
   text-align: center;
   margin-top: 30px;
 }
@@ -928,10 +967,10 @@ textarea:focus{
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: rgb(28, 28, 28);
+  background-color: var(--darkGray);
   justify-content: center;
-  color: rgb(247, 247, 247);
-  border-top: 1px solid rgb(247, 247, 247);
+  color: white;
+  border-top: 1px solid white;
   text-align: center;
 }
 
@@ -945,7 +984,7 @@ textarea:focus{
 }
 
 .fab{
-  color: rgb(247, 247, 247);
+  color: white;
 }
 
 .fa-facebook-f{
@@ -960,7 +999,7 @@ textarea:focus{
 
 
 .fab:hover{
-  color: rgb(56, 119, 212);
+  color: var(--mainAccent);
 }
 
 
@@ -1042,7 +1081,7 @@ footer .copy{
   }
   .nav-active{
     transform: translateX(0%);
-    background-color: rgb(28, 28, 28);
+    background-color: var(--darkGray);
     transition: background-color 0.5s ease-in;
     z-index: 16;
     pointer-events: auto;
@@ -1058,7 +1097,7 @@ footer .copy{
     position: absolute;
     bottom: -500px;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%);    
   }
   .titles{
     width: 100%;
@@ -1074,10 +1113,10 @@ footer .copy{
     width: 100%;
     position: absolute;
     bottom: -90px;
-    background-color: rgb(28, 28, 28);
+    background-color: var(--darkGray);
     justify-content: center;
-    color: rgb(247, 247, 247);
-    border-top: 1px solid rgb(247, 247, 247);
+    color: white;
+    border-top: 1px solid white;
     text-align: center;
   }    
 
@@ -1101,7 +1140,7 @@ footer .copy{
     padding: 10px;
     color: white;
     background-color: rgba(107, 166, 255, 0.4);
-    border: solid rgb(56, 119, 212) 8px;
+    border: solid var(--mainAccent) 8px;
     white-space: pre-line;
     position: fixed;
     top: 95px;
@@ -1187,7 +1226,7 @@ footer .copy{
     display: inline-block;
     height: 5px;
     width: 20px;
-    background-color: rgb(247, 247, 247);
+    background-color: white;
     opacity: 0.65;
   } */
   .arrow-container{
@@ -1294,14 +1333,14 @@ footer .copy{
     display: inline-block;
     height: 3px;
     width: 13px;
-    background-color: rgb(247, 247, 247);
+    background-color: white;
     opacity: 0.65;
   }
   .slider-button-active{
     opacity: 1;
     height: 3.5px;
     width: 13px;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
   }  
   .arrow-container{
     width: 200px;
