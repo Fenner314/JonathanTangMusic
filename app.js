@@ -98,6 +98,10 @@ const navbarChange = () => {
 //     });
 //   }
 
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}  
+
 const app = () => {
     navSlide();
     navbarChange();
