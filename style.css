@@ -1368,4 +1368,9 @@ footer .copy{
   .titles p {
     font-size: 1.03rem;
   }
+
+  #curator-feed-grid-carousel {
+    padding: 0 30px 40px 30px ;
+  }
+  
 }
