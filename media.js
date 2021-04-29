@@ -35,9 +35,7 @@ const imgScroll = () => {
 
     rightArrow.onclick = function() {
         initial += amount;
-        if (mobile.matches) {
-            imgContainer.style.transform = 'translateX(-' + (initial / 3) + 'px)';
-        } else if (tablet.matches) {
+        if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-' + (initial / 2) + 'px)';
         } else {
             imgContainer.style.transform = 'translateX(-' + initial + 'px)';
@@ -57,9 +55,7 @@ const imgScroll = () => {
 
     leftArrow.onclick = function() {
         initial -= amount;
-        if (mobile.matches) {
-            imgContainer.style.transform = 'translateX(-' + (initial / 3) + 'px)';
-        } else if (tablet.matches) {
+        if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-' + (initial / 2) + 'px)';
         } else {
             imgContainer.style.transform = 'translateX(-' + initial + 'px)';
@@ -74,14 +70,8 @@ const imgScroll = () => {
         sliderButtons[counter].classList.toggle('slider-button-active');
     };
 
-    // buttons.onclick = function() {
-    //     buttons.classList.toggle('slider-button-active');
-    // }
-
     btnOne.onclick = function() {
-        if (mobile.matches) {
-            imgContainer.style.transform = 'translateX(0px)';
-        }else if (tablet.matches) {
+        if (tablet.matches) {
             imgContainer.style.transform = 'translateX(0px)';
         } else {
             imgContainer.style.transform = 'translateX(0px)';
@@ -93,15 +83,10 @@ const imgScroll = () => {
         sliderButtons[counter].classList.toggle('slider-button-active');
         counter = 0;
         sliderButtons[counter].classList.toggle('slider-button-active');
-        // if (sliderButtons.every(function(btn){return btn.classList = 'slider-button'})) {
-        //     sliderButtons[counter].classList.toggle('slider-button-reset');
-        // } 
     };
     
     btnTwo.onclick = function() {
-        if (mobile.matches) {
-            imgContainer.style.transform = 'translateX(-200px)';
-        }else if (tablet.matches) {
+        if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-300px)';
         } else {
             imgContainer.style.transform = 'translateX(-600px)';
@@ -116,9 +101,7 @@ const imgScroll = () => {
     };
     
     btnThree.onclick = function() {
-        if (mobile.matches) {
-            imgContainer.style.transform = 'translateX(-400px)';
-        }else if (tablet.matches) {
+        if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-600px)';
         } else {
             imgContainer.style.transform = 'translateX(-1200px)';
@@ -133,9 +116,7 @@ const imgScroll = () => {
     };
     
     btnFour.onclick = function() {
-        if (mobile.matches) {
-            imgContainer.style.transform = 'translateX(-600px)';
-        }else if (tablet.matches) {
+        if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-900px)';
         } else {
             imgContainer.style.transform = 'translateX(-1800px)';
@@ -150,9 +131,7 @@ const imgScroll = () => {
     };
     
     btnFive.onclick = function() {
-        if (mobile.matches) {
-            imgContainer.style.transform = 'translateX(-800px)';
-        }else if (tablet.matches) {
+        if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-1200px)';
         } else {
             imgContainer.style.transform = 'translateX(-2400px)';
@@ -167,9 +146,7 @@ const imgScroll = () => {
     };
     
     btnSix.onclick = function() {
-        if (mobile.matches) {
-            imgContainer.style.transform = 'translateX(-1000px)';
-        }else if (tablet.matches) {
+        if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-1500px)';
         } else {
             imgContainer.style.transform = 'translateX(-3000px)';
@@ -184,9 +161,7 @@ const imgScroll = () => {
     };
     
     btnSeven.onclick = function() {
-        if (mobile.matches) {
-            imgContainer.style.transform = 'translateX(-1200px)';
-        }else if (tablet.matches) {
+        if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-1800px)';
         } else {
             imgContainer.style.transform = 'translateX(-3600px)';
@@ -201,9 +176,7 @@ const imgScroll = () => {
     };
     
     btnEight.onclick = function() {
-        if (mobile.matches) {
-            imgContainer.style.transform = 'translateX(-1400px)';
-        }else if (tablet.matches) {
+        if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-2100px)';
         } else {
             imgContainer.style.transform = 'translateX(-4200px)';
@@ -218,9 +191,7 @@ const imgScroll = () => {
     };
     
     btnNine.onclick = function() {
-        if (mobile.matches) {
-            imgContainer.style.transform = 'translateX(-1600px)';
-        }else if (tablet.matches) {
+        if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-2400px)';
         } else {
             imgContainer.style.transform = 'translateX(-4800px)';
@@ -235,9 +206,7 @@ const imgScroll = () => {
     };
     
     btnTen.onclick = function() {
-        if (mobile.matches) {
-            imgContainer.style.transform = 'translateX(-1800px)';
-        }else if (tablet.matches) {
+        if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-2700px)';
         } else {
             imgContainer.style.transform = 'translateX(-5400px)';
@@ -252,9 +221,7 @@ const imgScroll = () => {
     };
     
     btnEleven.onclick = function() {
-        if (mobile.matches) {
-            imgContainer.style.transform = 'translateX(-2000px)';
-        }else if (tablet.matches) {
+        if (tablet.matches) {
             imgContainer.style.transform = 'translateX(-3000px)';
         } else {
             imgContainer.style.transform = 'translateX(-6000px)';
@@ -267,45 +234,6 @@ const imgScroll = () => {
         counter = 10;
         sliderButtons[counter].classList.toggle('slider-button-active');
     };
-
-    
-    
-    
-
-    // imgOne.onclick = function() {
-    //     initial = 0;
-    // }
-    // imgTwo.onclick = function() {
-    //     initial = 600;
-    // }
-    // imgThree.onclick = function() {
-    //     initial = 1200;
-    // }
-    // imgFour.onclick = function() {
-    //     initial = 1800;
-    // }
-    // imgFive.onclick = function() {
-    //     initial = 2400;
-    // }
-    // imgSix.onclick = function() {
-    //     initial = 3000;
-    // }
-    // imgSeven.onclick = function() {
-    //     initial = 3600;
-    // }
-    // imgEight.onclick = function() {
-    //     initial = 4200;
-    // }
-    // imgNine.onclick = function() {
-    //     initial = 4800;
-    // }
-    // imgTen.onclick = function() {
-    //     initial = 5400;
-    // }
-    // imgEleven.onclick = function() {
-    //     initial = 6000;
-    // }
-
 };
 
 imgScroll();

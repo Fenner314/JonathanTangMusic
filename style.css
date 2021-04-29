@@ -1078,19 +1078,6 @@ footer .copy{
     pointer-events: auto;
   }
 
-  /* HOME  */
-  /* .footer_home{
-    height: 90px;
-    width: 100%;
-    position: absolute;
-    bottom: -90px;
-    background-color: var(--darkGray);
-    justify-content: center;
-    color: white;
-    border-top: 1px solid white;
-    text-align: center;
-  }     */
-
   /* ABOUT */
   .headshot-small {
     display: none;
@@ -1264,7 +1251,7 @@ footer .copy{
   .audio-card{
     width: 200px;
   }
-  .slide-container{
+  /* .slide-container{
     display: block;
     width: 200px;
     height: 150px;
@@ -1275,10 +1262,6 @@ footer .copy{
     position: relative;
     transition-property: all;
     transition: ease-in-out 750ms;
-    /* transition: left 2s;
-    -webkit-transition: left 2s;
-    -moz-transition: left 2s;
-    -o-transition: left 2s; */
   }
   .slider-image{
     float: left;
@@ -1327,7 +1310,7 @@ footer .copy{
   .arrow-container img{
     width: 20px;
     z-index: 4;
-  }
+  } */
 
   .credit h4 {
     font-size: 16px;
@@ -1373,4 +1356,7 @@ footer .copy{
     padding: 0 30px 40px 30px ;
   }
   
+  .copy {
+    font-size: .7rem;
+  }
 }

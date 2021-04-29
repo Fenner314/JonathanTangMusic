@@ -101,7 +101,7 @@ const navbarChange = () => {
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }  
-
+console.log('app.js')
 const app = () => {
     navSlide();
     navbarChange();

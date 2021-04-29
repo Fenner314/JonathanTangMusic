@@ -35,7 +35,7 @@ setInterval(nextQuote, time);
 
 const logo = document.querySelector('.academy-logo-small');
 const lessonsBanner = document.querySelector('.academy-background');
-const navbar = document.getElementById('myNav');
+const navbar = document.querySelector('.myNav');
 const activationHeight = lessonsBanner.offsetTop + lessonsBanner.offsetHeight - navbar.offsetHeight;
 let mobile = window.matchMedia('(max-width: 900px)');
 
