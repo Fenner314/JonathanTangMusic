@@ -40,7 +40,7 @@ body{
     ), 
     url(./img/TangPortrait-132.jpg);
   background-size: cover;
-  background-position: 50% 10%;
+  background-position: 0% 10%;
 }
 
 .all{
@@ -214,28 +214,13 @@ li{
 }
 
 .titles{
-  width: 35%;
+  /* width: 35%; */
   position: absolute;
   top: 35%;
   left: 11%;
   font-family: 'Open Sans', Helvetica, sans-serif;    
   white-space: nowrap;
 }
-
-/* .home-img{
-  max-width: 80%;
-  height: calc(80vh - 100px);
-  position: absolute;
-  bottom: 74px;
-  right: 10%;
-}  */
-.home-img{
-  /* max-width: 80%; */
-  height: 80vh;
-  position: fixed;
-  bottom: 54px;
-  right: 8%;
-} 
 
 .titles h1{
   /* font-size: 48px; */
@@ -247,12 +232,13 @@ li{
 
 .titles p{
   /* font-size: 20px; */
-  font-size: 1.5vw;
+  font-size: 1.69vw;
   letter-spacing: 1.3px;
   position: relative;
-  font-weight: 500;
+  font-weight: 300;
   color: white;
   text-shadow: 2px 2px 2px black;
+  white-space: nowrap;
   /* color: var(--darkGray); */
 }
 
@@ -1002,7 +988,6 @@ textarea:focus{
   color: var(--mainAccent);
 }
 
-
 footer .copy{
   position: relative;
   top: 25px;
@@ -1016,6 +1001,14 @@ footer .copy{
   padding: 0 10px;
 }
 
+.fenner {
+  color: var(--mainAccent);
+  text-decoration: none;
+}
+.fenner:hover {
+  color: var(--mainAccent);
+}
+
 
 
 
@@ -1026,17 +1019,14 @@ footer .copy{
   }
 
   /* HOME */
-  .home-img {
-    right: 0%;
-  }
-  .titles{
-    left: 10%
+  .titles {
+    left: 5%;
   }
   .titles h1 {
-    font-size: 5vw;
+    font-size: 2.5rem;
   }
   .titles p {
-    font-size: 1.8vw;
+    font-size: 1.03rem;
   }
 
   /* MEDIA */
@@ -1088,27 +1078,7 @@ footer .copy{
   }
 
   /* HOME  */
-  .container{
-    width: 100%;
-    text-align: center;
-    position: relative;
-  }
-  .home-img{ 
-    position: absolute;
-    bottom: -500px;
-    left: 50%;
-    transform: translate(-50%);    
-  }
-  .titles{
-    width: 100%;
-    position: fixed;
-    top: 90px;
-    left: 0;
-  }
-  .titles p{
-    text-align: center;
-  }
-  .footer_home{
+  /* .footer_home{
     height: 90px;
     width: 100%;
     position: absolute;
@@ -1118,7 +1088,7 @@ footer .copy{
     color: white;
     border-top: 1px solid white;
     text-align: center;
-  }    
+  }     */
 
   /* ABOUT */
   .headshot-small {
@@ -1256,7 +1226,11 @@ footer .copy{
   }
 } 
 
-@media screen and (max-width: 575px){
+@media screen and (max-width: 575px) {
+  .body-home {
+    background-position: 20% 10%;
+  }
+
   .brand a {
     font-size: 1.3rem;
   }
@@ -1367,3 +1341,30 @@ footer .copy{
   }
 }
 
+@media screen and (max-width: 485px) {
+  .body-home {
+    background-position: 30% 10%;
+  }
+  .titles h1 {
+    font-size: 1.9rem;
+  }
+  .titles p {
+    font-size: .75rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .body-home {
+    background-position: 40% 10%;
+  }
+  .titles {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .titles h1 {
+    font-size: 2.5rem;
+  }
+  .titles p {
+    font-size: 1.03rem;
+  }
+}
