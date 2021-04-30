@@ -1,3 +1,17 @@
+// LOADING SCREEN
+const load = () => {
+    const loader = document.querySelector('.loader');
+
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            loader.style.transform = 'translateX(100%)';
+        }, 6000);
+        setTimeout(() => {
+            loader.parentNode.removeChild(loader);
+        }, 8000);
+    });
+}
+
 //NAVIGATION 
 const navSlide = () => {
     const burger = document.querySelector('.burger');
@@ -105,6 +119,7 @@ window.onbeforeunload = function () {
 }  
 console.log('app.js')
 const app = () => {
+    load();
     navSlide();
     navbarChange();
 };
