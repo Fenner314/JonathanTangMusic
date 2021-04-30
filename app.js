@@ -4,18 +4,18 @@ const navSlide = () => {
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
     const navBar = document.querySelector('.myNav');
-    const tint = document.querySelector('.tint');
+    // const tint = document.querySelector('.tint');
     const body = document.body;
     const notNav = document.querySelector('.not-nav');
 
-    navBar.classList.add('.nav-toggle');
+    // navBar.classList.add('.nav-toggle');
 
     burger.addEventListener('click', () => {
         //Toggle Nav
-        tint.classList.toggle('tint-active');
+        // tint.classList.toggle('tint-active');
         nav.classList.toggle('nav-active');
-        navBar.classList.toggle('nav-toggle');
-        navBar.classList.toggle('navbar-active');
+        // navBar.classList.toggle('nav-toggle');
+        // navBar.classList.toggle('navbar-active');
         body.classList.toggle('no-scroll');
         notNav.classList.toggle('content-inactive');
 
@@ -23,7 +23,9 @@ const navSlide = () => {
         //Animate Links
         navLinks.forEach((link, index) => {
             if(link.style.animation) {
-                link.style.animation = '';
+                setTimeout(() => {
+                    link.style.animation = '';
+                }, 500)
             } else {
                 link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
             }
@@ -38,7 +40,7 @@ const navSlide = () => {
         window.onresize = () => {
             mobile = window.matchMedia('(max-width: 900px)');
             if (!mobile.matches && happened) {    
-                tint.classList.remove('tint-active');
+                // tint.classList.remove('tint-active');
                 nav.classList.remove('nav-active');
                 navBar.classList.remove('nav-toggle');
                 navBar.classList.remove('navbar-active');

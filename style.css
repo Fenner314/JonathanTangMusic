@@ -88,7 +88,7 @@ nav{
   font-weight: 400;
   text-shadow: 1px 1px 1px black;
   position: relative;
-  z-index: 50;
+  /* z-index: 50; */
   white-space: nowrap;
   margin-bottom: 0;
   vertical-align: center;
@@ -166,6 +166,7 @@ li{
   display: none;
   cursor: pointer;
   z-index: 13;
+  position: relative;
 }
 
 .burger div{
@@ -186,7 +187,6 @@ li{
 .no-scroll{
   overflow: hidden;
 }
-
 
 @keyframes navLinkFade{
   from{
@@ -1051,16 +1051,17 @@ footer .copy{
   .nav-links{
     position: absolute;
     right: 0px;
-    height: 92vh;
-    top: 8vh;
+    height: 100vh;
+    top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    width: 100%;
     pointer-events: none;
     padding: 20px;
-    /* transform: translateX(100%); */
-    /* transition: background-color 0.5s ease-in; */
+    opacity: 0;
+
+    transition: all 0.5s ease-in;
   }
   .nav-links li{
     opacity: 0;
@@ -1076,6 +1077,7 @@ footer .copy{
     transition: background-color 0.5s ease-in;
     z-index: 16;
     pointer-events: auto;
+    opacity: 1;
   }
 
   /* ABOUT */
