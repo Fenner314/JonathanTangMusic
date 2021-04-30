@@ -3,7 +3,7 @@ const quotes = document.getElementsByClassName('academy-quotes');
 const activeQuote = document.querySelector('.academy-quotes.academy-quotes-active');
 const back = document.querySelector('.academy-background');
 
-const time = 11000;
+const time = 10000;
 let quoteIndex = 0;
 
 quotes[quoteIndex].classList.toggle('academy-quotes-active');

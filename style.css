@@ -370,6 +370,8 @@ li{
 #academy{
   background-image: var(--gradient);
   background-attachment: fixed;
+  display: flex;
+  justify-content: center;
 }
 
 .academy-background {
@@ -801,7 +803,6 @@ li{
   box-shadow: 0px 2px 4px #9b9b9b;
   height: 300px;
   text-align: center;
-  opacity: 0.8;
 }
 
 .contact_me{
@@ -1216,11 +1217,6 @@ footer .copy{
     width: 450px;
     height: 267px;
   }
-    
-  .audio-card audio{
-
-  }
-  
 }
 
 @media only screen and (max-width: 575px) {
@@ -1288,6 +1284,81 @@ footer .copy{
   .titles p {
     font-size: .75rem;
   }
+
+  .jumbotron {
+    padding: 2em 0;
+  }
+  .academy-logo {
+    height: 260px !important;
+  }
+  .academy-quotes-active {
+    width: 350px;
+    height: 320px;
+    top: 40px;
+  }
+  .academy-quotes-active p {
+    font-size: 14px;
+  }
+  .academy-quotes-active h6 {
+    bottom: -170px;
+  }
+  .academy-quotes-active h5 {
+    bottom: -170px;
+  }
+
+  /* .academy-quotes-active{
+    position: relative;
+    height: 250px;
+    background-color: rgba(107, 166, 255, 0.5);
+    border: solid var(--mainAccent) 10px;
+    display: inline-block;
+    top: 40px;
+    font-family: 'IBM Plex Serif', serif;
+    text-align: center;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .academy-quotes-active p{
+    color: white;
+    position: absolute;
+    top: 50px;
+    padding: 10px 30px;
+    font-size: 13px;
+    font-weight: 400;
+    width: 100%;
+  }
+  
+  .academy-quotes-active h6{
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    position: relative;
+    bottom: -110px;
+  
+  }
+  
+  .academy-quotes-active span{
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .academy-quotes-active h5{
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--darkGray);
+    background-color: var(--mainAccent);
+    width: fit-content;
+    position: relative;
+    bottom: -105px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4px 6px;
+    box-shadow: 8px 6px var(--darkGray);
+  } */
+  
 }
 
 @media screen and (max-width: 425px) {
