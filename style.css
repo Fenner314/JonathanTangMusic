@@ -50,6 +50,9 @@ body{
   width: 100vw;
 }
 
+h2 {
+  text-shadow: 1px 1px 1px black;
+}
 
 /*NAVIGATION*/
 nav{
@@ -302,7 +305,7 @@ li{
   max-width: 75ch;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 4rem;
+  padding: 0 2rem;
 }
 
 .bio_quote{
@@ -561,44 +564,37 @@ li{
 
 .recording-grid-container{
   display: grid;
-  width: 80%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 500px 500px;
-  justify-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
+  width: 90%;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 2rem;
+  margin: 50px auto;
 }
 
 .video-card{
-  background-color: var(--mainAccent);
-  width: 300px;
-  margin-bottom: 35px;
-  margin-top: 35px;
-  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  box-shadow: 2px 2px 4px #9b9b9b;
 }
 
 .audio-card{
-  background-color: var(--mainAccent);
-  width: 300px;
-  margin-bottom: 35px;
-  margin-top: 35px;
+  /* background-color: var(--mainAccent);
+  box-shadow: 2px 2px 4px  #9b9b9b; */
+  width: 100%;
   text-align: center;
-  box-shadow: 2px 2px 4px  #9b9b9b;
 }
 
 .video-card iframe{
-  width: 100%;
-  height: 45%;
   border: none;
+  margin-bottom: 10px;
 }
 
 .audio-card audio{
   width: 85%;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .video-card h3, h5, p{
@@ -614,9 +610,13 @@ li{
 }
 
 #curator-feed-grid-carousel {
-  padding: 0 60px 40px 60px ;
+  padding: 0 80px 40px 60px ;
   margin-bottom: 50px;
   width: 100%;
+}
+
+.crt-widget.crt-widget-branded .crt-logo {
+  display: none !important;
 }
 
 .slide-container{
@@ -1031,15 +1031,14 @@ footer .copy{
   }
 
   /* MEDIA */
-  .recording-grid-container{
-    width: 80%;
+  .video-card iframe{
+    width: 300px;
+    height: 200px;
   }
-  .video-card{
-    width: 250px;
+  
+  .audio-card audio{
+    width: 65%;
   }
-  .audio-card{
-    width: 250px;
-  }  
 }
 
 @media screen and (max-width: 900px){
@@ -1123,17 +1122,10 @@ footer .copy{
 }
 
   /* MEDIA */
-  .recording-grid-container{
-    width: 60%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 500px 500px 500px 500px;
+  .audio-card audio {
+    width: 90%
   }
-  .video-card{
-    width: 300px;
-  }
-  .audio-card{
-    width: 300px;
-  }
+  
   .slide-container{
     display: block;
     width: 300px;
@@ -1214,7 +1206,24 @@ footer .copy{
   }
 } 
 
-@media screen and (max-width: 575px) {
+@media only screen and (max-width: 740px) {
+  .recording-grid-container {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .video-card iframe{
+    width: 450px;
+    height: 267px;
+  }
+    
+  .audio-card audio{
+
+  }
+  
+}
+
+@media only screen and (max-width: 575px) {
   .body-home {
     background-position: 20% 10%;
   }
@@ -1230,7 +1239,7 @@ footer .copy{
     font-size: 22px;
   }
   .paragraph {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .academy-quotes-active{
@@ -1245,72 +1254,16 @@ footer .copy{
     font-size: 22px;
   }
 
-  .video-card{
-    width: 200px;
+  .video-card iframe {
+    width: 280px;
+    height: 180px;
   }
-  .audio-card{
-    width: 200px;
+  .audio-card audio{
+    width: 90%;
   }
-  /* .slide-container{
-    display: block;
-    width: 200px;
-    height: 150px;
+  #curator-feed-grid-carousel {
+    padding: 0 40px 40px 40px ;
   }
-  .image-container{
-    width: 2200px;
-    height: 150px;
-    position: relative;
-    transition-property: all;
-    transition: ease-in-out 750ms;
-  }
-  .slider-image{
-    float: left;
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-  }
-  #image-2{
-    object-position: 50% 65%;
-  }
-  #image-6{
-    object-position: left 40%;
-  }
-  #image-8{
-    object-position: left 32%;
-  }
-  #image-10{
-    object-position: left 47%;
-  }
-  .button-container{
-    position: relative;
-    top: -20px;
-  }
-  .slider-button{
-    display: inline-block;
-    height: 3px;
-    width: 13px;
-    background-color: white;
-    opacity: 0.65;
-  }
-  .slider-button-active{
-    opacity: 1;
-    height: 3.5px;
-    width: 13px;
-    background-color: white;
-  }  
-  .arrow-container{
-    width: 200px;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 55px;
-  }
-  .arrow-container img{
-    width: 20px;
-    z-index: 4;
-  } */
 
   .credit h4 {
     font-size: 16px;
@@ -1350,10 +1303,6 @@ footer .copy{
   }
   .titles p {
     font-size: 1.03rem;
-  }
-
-  #curator-feed-grid-carousel {
-    padding: 0 30px 40px 30px ;
   }
   
   .copy {
