@@ -35,8 +35,8 @@ body{
 .body-home {
   background-image: 
     linear-gradient(
-      rgba(0, 0, 0, .5), 
-      rgba(0, 0, 0, .5)
+      rgba(0, 0, 0, .3), 
+      rgba(0, 0, 0, .3)
     ), 
     url(./img/TangPortrait-132.jpg);
   background-size: cover;
@@ -60,7 +60,7 @@ h2 {
     transform: translateX(0)
   }
   50% {
-    transform: translateX(100px);
+    transform: translateX(80px);
   }
   100% {
     transform: translateX(0)
@@ -68,20 +68,17 @@ h2 {
 }
 
 @keyframes note-load-1 {
-  0%, 25% {
+  0%{
     opacity: 0;
   }
-  25%, 50% {
-    opacity: 1;
+  25%{
+    opacity: 0;
   }
-  50% {
-    opacity: 1;
-  }
-  75% {
+  30% {
     opacity: 1;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
@@ -89,17 +86,14 @@ h2 {
   0% {
     opacity: 0;
   }
-  25% {
+  50% {
     opacity: 0;
   }
-  50% {
-    opacity: 1;
-  }
-  75% {
+  55% {
     opacity: 1;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
@@ -107,17 +101,14 @@ h2 {
   0% {
     opacity: 0;
   }
-  25% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
   75% {
+    opacity: 0;
+  }
+  80% {
     opacity: 1;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
@@ -127,14 +118,17 @@ h2 {
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-image: var(--gradient);
+  background-color: rgb(55, 55, 55);
+  /* background-color: white; */
+  /* background-color: var(--mainAccent); */
+  /* background-image: var(--gradient); */
   z-index: 10000;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  transition: all 2s ease-in-out;
+  transition: transform 2s ease-in-out;
 }
 
 .load-container {
@@ -154,6 +148,8 @@ h2 {
   position: relative;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #loader-body {
@@ -162,16 +158,16 @@ h2 {
 
 #loader-slide {
   position: absolute;
-  left: 95px;
-  top: 27.5px;
+  left: 130px;
+  top: 22.9px;
 
   animation: loading 4s ease-in-out infinite;
 }
 
 #music-note-1 {
   position: absolute;
-  left: 190px;
-  top: 75px;
+  left: 220px;
+  top: 65px;
   transform: rotate(25deg);
 
   animation: note-load-1 4s linear infinite
@@ -179,8 +175,8 @@ h2 {
 
 #music-note-2 {
   position: absolute;
-  left: 230px;
-  top: 55px;
+  left: 260px;
+  top: 45px;
   transform: rotate(-15deg);
 
   animation: note-load-2 4s linear infinite
@@ -188,11 +184,17 @@ h2 {
 
 #music-note-3 {
   position: absolute;
-  left: 270px;
-  top: 65px;
+  left: 300px;
+  top: 55px;
   transform: rotate(10deg);
 
   animation: note-load-3 4s linear infinite
+}
+
+#loading-brand a {
+  position: relative;
+  bottom: 40px;
+  font-size: 2.5rem
 }
 
 /*NAVIGATION*/
@@ -1351,6 +1353,10 @@ footer .copy{
 } 
 
 @media only screen and (max-width: 740px) {
+  .load-container {
+    transform: scale(.8)
+  }
+
   .recording-grid-container {
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto;
@@ -1448,63 +1454,13 @@ footer .copy{
   .academy-quotes-active h5 {
     bottom: -170px;
   }
-
-  /* .academy-quotes-active{
-    position: relative;
-    height: 250px;
-    background-color: rgba(107, 166, 255, 0.5);
-    border: solid var(--mainAccent) 10px;
-    display: inline-block;
-    top: 40px;
-    font-family: 'IBM Plex Serif', serif;
-    text-align: center;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  .academy-quotes-active p{
-    color: white;
-    position: absolute;
-    top: 50px;
-    padding: 10px 30px;
-    font-size: 13px;
-    font-weight: 400;
-    width: 100%;
-  }
-  
-  .academy-quotes-active h6{
-    color: white;
-    font-size: 13px;
-    font-weight: 500;
-    position: relative;
-    bottom: -110px;
-  
-  }
-  
-  .academy-quotes-active span{
-    display: inline-block;
-    width: 100%;
-  }
-  
-  .academy-quotes-active h5{
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    color: var(--darkGray);
-    background-color: var(--mainAccent);
-    width: fit-content;
-    position: relative;
-    bottom: -105px;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 4px 6px;
-    box-shadow: 8px 6px var(--darkGray);
-  } */
-  
 }
 
 @media screen and (max-width: 425px) {
+  .load-container {
+    transform: scale(.6)
+  }
+
   .body-home {
     background-position: 40% 10%;
   }
