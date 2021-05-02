@@ -253,7 +253,7 @@ li{
 .nav-links a{
   color: white;
   text-decoration: none;
-  border-bottom: 3px solid transparent;
+  border-bottom: 2px solid transparent;
   letter-spacing: .05em;
   font-weight: 500;
 
@@ -266,12 +266,12 @@ li{
 } */
 
 .nav-links a:hover{
-  border-bottom: 3px solid var(--mainAccent);
+  border-bottom: 2px solid var(--mainAccent);
   transition: 0.5s;
 }
 
 .nav-links a.active{
-  border-bottom: 3px solid var(--mainAccent);
+  border-bottom: 2px solid var(--mainAccent);
 }
 
 .tint-active{

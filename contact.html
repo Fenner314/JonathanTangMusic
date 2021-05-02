@@ -43,7 +43,7 @@
                 
                 <div class="form" id="contact-form">
                     <p>If you would like to book me for a masterclass or recording session, have any questions about music, the marching arts, fitness, or arrangements, or just feel like saying hi, please feel free to leave your name and email and I’ll get back to you!</p>
-                    <form autocomplete="off">
+                    <form action="POST" data-netlify="true" autocomplete="off">
                         <div class="name">
 
                             <div class="name_input">
@@ -66,6 +66,13 @@
                         <!-- <label for="message">Message*</label> -->
                         <br>
                         <textarea name="message" rows="7" cols="78" placeholder="Write your message here.*" required></textarea>
+                        <br><br>
+
+                        <!-- Recaptcha -->
+                        <br>
+                        <div class="field">
+                            <div data-netlify-recaptcha="true"></div>
+                        </div>
                         <br><br>
 
                         <input type="submit" value="Send" name="send" id="send">
