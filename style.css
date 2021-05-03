@@ -173,7 +173,7 @@ h2 {
   left: 130px;
   top: 22.9px;
 
-  animation: loading 4s ease-in-out infinite;
+  animation: loading 3s ease-in-out infinite;
 }
 
 #music-note-1 {
@@ -182,7 +182,7 @@ h2 {
   top: 65px;
   transform: rotate(25deg);
 
-  animation: note-load-1 4s linear infinite
+  animation: note-load-1 3s linear infinite
 }
 
 #music-note-2 {
@@ -191,7 +191,7 @@ h2 {
   top: 45px;
   transform: rotate(-15deg);
 
-  animation: note-load-2 4s linear infinite
+  animation: note-load-2 3s linear infinite
 }
 
 #music-note-3 {
@@ -200,7 +200,7 @@ h2 {
   top: 55px;
   transform: rotate(10deg);
 
-  animation: note-load-3 4s linear infinite
+  animation: note-load-3 3s linear infinite
 }
 
 #loading-brand a {
@@ -995,99 +995,71 @@ li{
 
 .form{
   text-align: center;
-  max-width: 48%;
+  width: 80%;
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.form_info{
-  text-align: left;
-}
-
 input{
-  height: 40px;
+  height: 50px;
   width: 100%;
-  border-radius: 5px;
   padding: 12px 10px;
+  border: none;
+  background: rgba(255, 255, 255, .7);
+
+  transition: background .1s ease-in-out;
 }
 
 textarea{
-  border-radius: 5px;
   padding: 12px 10px;
   width: 100%;
+  border: none;
+  background: rgba(255, 255, 255, .75);
+
+  transition: background .1s ease-in-out;
 }
 
 label{
   color: white;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
+  margin-bottom: 0;
 }
 
-.name{
+.input-container{
   text-align: left;
-}
-
-.name_label{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-}
-
-#lastname{
-  position: relative;
-  left: 4.5%;
-}
-
-.name_input{
-  display: flex;
-  justify-content: space-between;
-}
-
-#fname{
-  width: 48%;
-}
-
-#lname{
-  width: 48%;
-}
-
-#exp{
+  margin-bottom: 10px;
   width: 100%;
+  position: relative;
 }
 
 input:focus{
   outline: none;
-  box-shadow: 1px 2px var(--mainAccent);
-  transform: translateY(-2px);
-  transform: translateX(-1px);
+  background: white;
 }
 
 textarea{
-resize: none;
+  resize: none;
 }
 
 textarea:focus{
   outline: none;
-  box-shadow: 2px 3px var(--mainAccent);
-  transform: translateY(-3px);
-  transform: translateX(-2px);
+  background: white;
 }
 
-#send{
-  box-shadow: 1px 2px var(--mainAccent);
-  width: 20%;
-  margin-bottom: 30px;
-  padding: 0 0;
-}
+.send-button {
+  height: 50px;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  border: none;
+  background: rgba(255, 255, 255, .75);
 
-#send:focus{
-  outline: none;
+  transition: background .1s ease-in-out;
 }
-
-#send:active{
-  transform: translateY(2px);
-  transform: translateX(1px);
-  box-shadow: none;
+.send-button:hover,
+.send-button:focus {
+  background: white;
 }
 
 /* MESSAGE SENT PAGE */

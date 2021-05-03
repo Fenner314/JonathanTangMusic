@@ -5,10 +5,10 @@ const load = () => {
     window.addEventListener('load', () => {
         setTimeout(() => {
             loader.style.transform = 'translateX(100%)';
-        }, 6000);
+        }, 4500);
         setTimeout(() => {
             loader.parentNode.removeChild(loader);
-        }, 8000);
+        }, 6000);
     });
 }
 

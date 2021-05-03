@@ -60,38 +60,30 @@
                 <div class="form" id="contact-form">
                     <p>If you would like to book me for a masterclass or recording session, have any questions about music, the marching arts, fitness, or arrangements, or just feel like saying hi, please feel free to leave your name and email and I’ll get back to you!</p>
                     <form method="POST" action="messageSent.html" data-netlify="true" autocomplete="off">
-                        <div class="name">
-
-                            <div class="name_input">
-                                <input type="text" name="fname" id="fname" placeholder="First Name*" required>
-                                <input type="text" name="lname" id="lname" placeholder="Last Name*" required>
-                            </div>
+                        <div class="name input-container">
+                            <label>Name:</label>
+                            <input type="text" name="name" id="name" required>
+                            <span class="underline"></span>
                         </div>
-                        <br>
-            
-                        <!-- <label for="email">Email Address*</label> -->
-                        <br>
-                        <input type="text" name="email" id="email" placeholder="Email*" required>
-                        <br><br>
-            
-                        <!-- <label for="subject">Subject*</label> -->
-                        <br>
-                        <input type="text" name="subject" id="subject" placeholder="Subject*" required>
-                        <br><br>
-            
-                        <!-- <label for="message">Message*</label> -->
-                        <br>
-                        <textarea name="message" rows="7" cols="78" placeholder="Write your message here.*" required></textarea>
-                        <br><br>
-
-                        <!-- Recaptcha -->
-                        <br>
-                        <div class="field">
+                        <div class="email input-container">
+                            <label>Email:</label>
+                            <input type="text" name="email" id="email" required>
+                            <span class="underline"></span>
+                        </div>
+                        <div class="subject input-container">
+                            <label>Subject:</label>
+                            <input type="text" name="subject" id="subject">
+                            <span class="underline"></span>
+                        </div>
+                        <div class="message input-container">
+                            <label>Message:</label>
+                            <textarea rows="5" cols="78" name="message" id="message" required></textarea>
+                            <span class="underline"></span>
+                        </div>
+                        <div class="input-container">
                             <div data-netlify-recaptcha="true"></div>
                         </div>
-                        <br><br>
-
-                        <input type="submit" value="Send" name="send" id="send">
+                        <button class="send-button">Send</button>
                     </form>
                 </div>
             </section>
