@@ -119,7 +119,7 @@ window.onbeforeunload = function () {
 }  
 console.log('app.js')
 const app = () => {
-    load();
+    // load();
     navSlide();
     navbarChange();
 };
