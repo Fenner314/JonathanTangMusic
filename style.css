@@ -1035,7 +1035,7 @@ label{
 }
 
 input:focus{
-  outline: none;
+  outline: 2px solid var(--mainAccent);
   background: white;
 }
 
@@ -1044,7 +1044,7 @@ textarea{
 }
 
 textarea:focus{
-  outline: none;
+  outline: 2px solid var(--mainAccent);
   background: white;
 }
 
@@ -1060,6 +1060,7 @@ textarea:focus{
 .send-button:hover,
 .send-button:focus {
   background: white;
+  outline: 2px solid var(--mainAccent);
 }
 
 /* MESSAGE SENT PAGE */
