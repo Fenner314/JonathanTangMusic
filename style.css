@@ -800,7 +800,7 @@ li{
   width: 80%;
   max-width: 600px;
   height: auto;
-  margin-bottom: 30px;
+  magin-bottom: 30px;
 }
 
 .glider {
@@ -810,14 +810,16 @@ li{
 .glider-prev {
   position: absolute;
   left: 20px;
-  bottom: 150px;
+  bottom: 0;
+  top: 0;
   color: rgb(204, 204, 204)
 }
 
 .glider-next {
   position: absolute;
   right: 20px;
-  bottom: 150px;
+  bottom: 0;
+  top: 0;
   color: rgb(204, 204, 204);
 }
 
@@ -1430,6 +1432,11 @@ footer .copy{
   }
   .academy-quotes-active h5 {
     bottom: -170px;
+  }
+
+  .glider-prev,
+  .glider-next {
+    display: none;
   }
 }
 
