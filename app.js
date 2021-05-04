@@ -96,23 +96,16 @@ const navbarChange = () => {
     document.addEventListener('scroll', navbarGray)
 }
 
+new Glider(document.querySelector('.glider'), {
+    slidesToShow: 1,
+    draggable: true,
+    dots: '#dots',
+    arrows: {
+        prev: '.glider-prev',
+        next: '.glider-next'
+    }
+});
 
-
-// Initialize and add the map
-// function initMap() {
-//     // The location of Uluru
-//     const ccm = { lat: 39.130005, lng: -84.517865 };
-//     // The map, centered at CCM
-//     const map = new google.maps.Map(document.getElementById("map"), {
-//       zoom: 11.5,
-//       center: ccm,
-//     });
-//     // The marker, positioned at Uluru
-//     const marker = new google.maps.Marker({
-//       position: ccm,
-//       map: map,
-//     });
-//   }
 
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
