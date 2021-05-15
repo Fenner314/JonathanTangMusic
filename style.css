@@ -1125,7 +1125,8 @@ footer .copy{
   text-decoration: none;
 }
 .fenner:hover {
-  color: var(--mainAccent);
+  color: rgb(34, 185, 153);
+  text-decoration: none;
 }
 
 
@@ -1436,7 +1437,13 @@ footer .copy{
 
   .glider-prev,
   .glider-next {
-    display: none;
+    font-size: 28px;
+  }
+  .glider-prev {
+    left: 5px
+  }
+  .glider-next {
+    right: 5px
   }
 }
 
