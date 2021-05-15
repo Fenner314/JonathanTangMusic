@@ -1123,6 +1123,8 @@ footer .copy{
 .fenner {
   color: var(--mainAccent);
   text-decoration: none;
+  
+  transition: color .3s ease-in-out;
 }
 .fenner:hover {
   color: rgb(34, 185, 153);
