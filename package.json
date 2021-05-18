@@ -1,0 +1,27 @@
+{
+  "name": "tangmusic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "\u001b[D\u001b[D\u001b\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[Cindex.js)",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "stripe": "^8.148.0"
+  },
+  "devDependencies": {
+    "dotenv": "^9.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fenner314/JonathanTangMusic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fenner314/JonathanTangMusic/issues"
+  },
+  "homepage": "https://github.com/Fenner314/JonathanTangMusic#readme"
+}
