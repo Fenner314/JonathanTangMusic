@@ -13,9 +13,8 @@
 </head>
 <body>
 
-    <div class="loader">
+    <!-- <div class="loader">
         <div class="load-container">
-            <!-- <span class="loading-message">Finishing up my practice</span> -->
             <div class="trombone-container">
                 <img id="loader-body" src="img/tromboneBody.svg" width="250px" alt="logo">
                 <img id="loader-slide" src="img/tromboneSlide.svg" width="250px" alt="logo">
@@ -27,7 +26,7 @@
                 <a href="#">Jonathan Tang Music</a>
             </div>    
         </div>    
-    </div>
+    </div> -->
 
     <nav class="myNav">
         <div class="brand">
@@ -46,6 +45,9 @@
             <div class="line2"></div>
             <div class="line3"></div>
         </div>
+        <a class="cart-icon" href="#cart">
+            <i class="fas fa-shopping-cart"></i>
+        </a>
     </nav>
     <div class="not-nav">
         <section class="jumbotron" id="downloads">
@@ -54,8 +56,102 @@
                 <h2>Downloads</h2>
             </div>
         </section>   
-        <div>
-            <h3 class="coming-soon">Content coming soon</h3>
+        <div class="content">
+            <div class="arrangements">
+                <h3 class="arrangements-title">My Arrangements</h3>
+                <div class="arrangements-products">
+                    <div class="arrangement-card">
+                        <img class="arrangement-image" src="img/sheet-music-temp.png" width="300px" alt="product image">
+                        <div class="card-right">
+                            <h2 class="arrangement-title">This is the title 1</h2>
+                            <h5>This is the composer</h5>
+                            <p>This is the description</p>
+                            <p>Digital Download</p>
+                            <span class="price">$5.00</span>
+                            <button class="add">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="arrangement-card">
+                        <img class="arrangement-image" src="img/sheet-music-temp.png" width="300px" alt="product image">
+                        <div class="card-right">
+                            <h2 class="arrangement-title">This is the title 2</h2>
+                            <h5>This is the composer</h5>
+                            <p>This is the description</p>
+                            <p>Digital Download</p>
+                            <span class="price">$5.00</span>
+                            <button class="add">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="arrangement-card">
+                        <img class="arrangement-image" src="img/sheet-music-temp.png" width="300px" alt="product image">
+                        <div class="card-right">
+                            <h2 class="arrangement-title">This is the title 3</h2>
+                            <h5>This is the composer</h5>
+                            <p>This is the description</p>
+                            <p>Digital Download</p>
+                            <span class="price">$5.00</span>
+                            <button class="add">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="arrangement-card">
+                        <img class="arrangement-image" src="img/sheet-music-temp.png" width="300px" alt="product image">
+                        <div class="card-right">
+                            <h2 class="arrangement-title">This is the title 4</h2>
+                            <h5>This is the composer</h5>
+                            <p>This is the description</p>
+                            <p>Digital Download</p>
+                            <span class="price">$5.00</span>
+                            <button class="add">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="arrangement-card">
+                        <img class="arrangement-image" src="img/sheet-music-temp.png" width="300px" alt="product image">
+                        <div class="card-right">
+                            <h2 class="arrangement-title">This is the title 5</h2>
+                            <h5>This is the composer</h5>
+                            <p>This is the description</p>
+                            <p>Digital Download</p>
+                            <span class="price">$5.00</span>
+                            <button class="add">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="cart">
+                <div class="cart-container">
+                    <hr>
+                    <h3>Your Cart</h3>
+                    <div class="cart-items-heading">
+                        <div>
+                            <p>Item</p>
+                        </div>
+                        <div>
+                            <p>Price</p>
+                        </div>
+                        <div>
+                            <p>Remove</p>
+                        </div>
+                    </div>
+                    <div class="cart-items"></div>
+                    <div class="cart-totals">
+                        <button id="clear-cart-button" class="cart-button">CLEAR CART</button>
+                        <div>
+                            <span>Subtotal: $</span><span id="sub-total">0</span>
+                        </div>
+                        <div>
+                            <span>Tax: $</span><span id="tax">0</span>
+                        </div>
+                        <div>
+                            <span>Total: $</span><span id="total">0</span>
+                        </div>
+                        <button id="checkout-button" class="cart-button">Checkout</button>
+                    </div>
+                </div>
+                <div class="empty-cart">
+                    <hr>
+                    <h3>Your Cart Is Empty</h3>
+                </div>
+            </div>
         </div>
         <footer class="footer">
             <div class="social">
@@ -67,5 +163,6 @@
     </div>
 
     <script src="app.js"></script>
+    <script src="downloads.js"></script>
 </body>
 </html>
