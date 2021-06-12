@@ -12,6 +12,9 @@
     <title>Jonathan Tang Music</title>
 </head>
 <body>
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=AWbyh-q3WnVa7v9HMI48g0amrp6tGxWrKSUi21Ve85P5HdwP1chIP1Eoe__-N3ZH8hnntJHAqQRLVxjl&disable-funding=paylater&enable-funding=venmo">
+    </script>
 
     <!-- <div class="loader">
         <div class="load-container">
@@ -60,7 +63,7 @@
             <div class="arrangements">
                 <h3 class="arrangements-title">My Arrangements</h3>
                 <div class="arrangements-products">
-                    <div class="arrangement-card">
+                    <div class="arrangement-card" id="1">
                         <img class="arrangement-image" src="img/sheet-music-temp.png" width="300px" alt="product image">
                         <div class="card-right">
                             <h2 class="arrangement-title">This is the title 1</h2>
@@ -71,7 +74,7 @@
                             <button class="add">Add To Cart</button>
                         </div>
                     </div>
-                    <div class="arrangement-card">
+                    <div class="arrangement-card" id="2">
                         <img class="arrangement-image" src="img/sheet-music-temp.png" width="300px" alt="product image">
                         <div class="card-right">
                             <h2 class="arrangement-title">This is the title 2</h2>
@@ -82,7 +85,7 @@
                             <button class="add">Add To Cart</button>
                         </div>
                     </div>
-                    <div class="arrangement-card">
+                    <div class="arrangement-card" id="3">
                         <img class="arrangement-image" src="img/sheet-music-temp.png" width="300px" alt="product image">
                         <div class="card-right">
                             <h2 class="arrangement-title">This is the title 3</h2>
@@ -93,7 +96,7 @@
                             <button class="add">Add To Cart</button>
                         </div>
                     </div>
-                    <div class="arrangement-card">
+                    <div class="arrangement-card" id="4">
                         <img class="arrangement-image" src="img/sheet-music-temp.png" width="300px" alt="product image">
                         <div class="card-right">
                             <h2 class="arrangement-title">This is the title 4</h2>
@@ -104,7 +107,7 @@
                             <button class="add">Add To Cart</button>
                         </div>
                     </div>
-                    <div class="arrangement-card">
+                    <div class="arrangement-card" id="5">
                         <img class="arrangement-image" src="img/sheet-music-temp.png" width="300px" alt="product image">
                         <div class="card-right">
                             <h2 class="arrangement-title">This is the title 5</h2>
@@ -141,10 +144,11 @@
                         <div>
                             <span>Tax: $</span><span id="tax">0</span>
                         </div>
-                        <div>
+                        <div class="total">
                             <span>Total: $</span><span id="total">0</span>
                         </div>
-                        <button id="checkout-button" class="cart-button">Checkout</button>
+                        <!-- <button id="checkout-button" class="cart-button">Checkout</button> -->
+                        <div id="paypal-button-container"></div>
                     </div>
                 </div>
                 <div class="empty-cart">
@@ -152,6 +156,9 @@
                     <h3>Your Cart Is Empty</h3>
                 </div>
             </div>
+        </div>
+        <div class="confirm-purchase">
+            
         </div>
         <footer class="footer">
             <div class="social">
@@ -164,5 +171,7 @@
 
     <script src="app.js"></script>
     <script src="downloads.js"></script>
+    <script>
+    </script>
 </body>
 </html>

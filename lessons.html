@@ -117,12 +117,38 @@
             </section>
             <section class="lessons paragraph">
                 <h2 class="subtitle">Let's work together! If you want to learn, I want to teach!</h2>
-                <p>Like many of my colleagues, lately I’ve been feeling a little unfulfilled spiritually due to the lack of camaraderie with friends/colleagues/students and I’ve been feeling that I wanted to get back into teaching. When I was still in my undergrad I was teaching on a weekly basis which not only helped my students, but also helped me develop and hone my craft as a teacher. This is something I haven’t been able to do yet at CCM and I miss it very much! I’ve helped guide students in the direction they want and I’m very pleased with how far they’ve gone. Several have made Allstate and even continued to pursue music in college.</p>
-                <p>Today, I would like to invite any brass players to join my online studio. To follow social guidelines, any and all lessons will be online for the foreseeable future. I’ve reduced my rates to compensate for this. Don’t wait until August to start preparing for Allstate, National Youth Orchestra, or College auditions. Start preparing and planning now! If you want to learn I want to teach! If you are a music educator and you’ve got trombone players that need help, please send them my way!</p>
-                <p>For rates and options please see the poster below. I look forward to working with some of you soon!</p>
+                <p class="text-block">Like many of my colleagues, lately I’ve been feeling a little unfulfilled spiritually due to the lack of camaraderie with friends/colleagues/students and I’ve been feeling that I wanted to get back into teaching. When I was still in my undergrad I was teaching on a weekly basis which not only helped my students, but also helped me develop and hone my craft as a teacher. This is something I haven’t been able to do yet at CCM and I miss it very much! I’ve helped guide students in the direction they want and I’m very pleased with how far they’ve gone. Several have made Allstate and even continued to pursue music in college.</p>
+                <p class="text-block">Today, I would like to invite any brass players to join my online studio. To follow social guidelines, any and all lessons will be online for the foreseeable future. I’ve reduced my rates to compensate for this. Don’t wait until August to start preparing for Allstate, National Youth Orchestra, or College auditions. Start preparing and planning now! If you want to learn I want to teach! If you are a music educator and you’ve got trombone players that need help, please send them my way!</p>
+                <p class="text-block">For rates and options please see the poster below. I look forward to working with some of you soon!</p>
             </section>
             <section class="poster">
                 <img src="img/Poster.JPG" />
+            </section>
+            <section class="text-lessons lessons">
+                <h2 class="subtitle">Want to sign up for email lessons?</h2>
+                <p class="text-block">For $20 per month, you can send me up to 5 videos per week with a combined length of no more than 10 minutes and I will give you feedback!</p>
+                <form method="POST" action="messageSent.html" data-netlify="true" netlify-honeypot="bot-trap" autocomplete="off">
+                    <div class="name input-container">
+                        <label>Name:</label>
+                        <input type="text" name="name" id="name" required>
+                        <span class="underline"></span>
+                    </div>
+                    <div class="email input-container">
+                        <label>Email:</label>
+                        <input type="text" name="email" id="email" required>
+                        <span class="underline"></span>
+                    </div>
+                    <div class="subject input-container">
+                        <input type="hidden" name="subject" id="subject" value="I want to sign up for email lessons!">
+                    </div>
+                    <div class="message input-container">
+                        <label>Message:</label>
+                        <textarea rows="5" cols="78" name="message" id="message" required>Hi Jonathan, I would love to sign up for email lessons!</textarea>
+                        <span class="underline"></span>
+                    </div>
+                    <input type="hidden" name="bot-trap"> 
+                    <button class="send-button">Send</button>
+                </form>
             </section>
             <footer class="footer footer-lessons">
                 <div class="social">

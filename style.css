@@ -687,7 +687,7 @@ li{
   margin-bottom: 35px;
 }
 
-.lessons p{
+.text-block{
   color: white;
   padding-bottom: 20px;
   font-family: 'Roboto', sans-serif;
@@ -704,6 +704,9 @@ li{
   width: 48%;
 }
 
+.text-lessons {
+  margin-top: 0;
+}
 /*MEDIA*/
 #media{
   background-image: var(--gradient);
@@ -937,6 +940,24 @@ li{
   margin-left: 50px;
 }
 
+.add {
+  color: white;
+  border: none;
+  background: var(--mainAccent);
+  border-radius: 4px;
+  padding: 7px 20px;
+  margin-left: 50px;
+
+  transition: .3s background-color;
+}
+
+.add:hover,
+.add:focus {
+  border: none;
+  outline: none; 
+  background-color: var(--darkAccent);
+}
+
 #cart {
   color: white;
   text-align: center;
@@ -1012,19 +1033,15 @@ hr {
 #clear-cart-button {
   margin-bottom: 10px;
   background-color: red;
+  border-radius: 4px;
 }
 #clear-cart-button:hover {
   background-color: rgb(179, 0, 0);
 }
 
-#checkout-button {
-  margin-top: 10px;
-  background-color: var(--mainAccent);
+.total {
+  margin-bottom: 10px;
 }
-#checkout-button:hover {
-  background-color: var(--darkAccent);
-}
-
 /* CONTACT */
 .banner {
   height: 300px;
