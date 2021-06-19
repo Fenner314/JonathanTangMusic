@@ -9,11 +9,11 @@
     "paypal-express-checkout": "^1.6.3"
   },
   "devDependencies": {
-    "dotenv": "^9.0.2"
+    "dotenv": "^10.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "netlify dev"
+    "dev": "netlify dev",
   },
   "repository": {
     "type": "git",

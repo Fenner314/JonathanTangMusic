@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/df64cf7d99.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="../img/favicon.png"/>
+    <title>Jonathan Tang Music</title>
+</head>
+<body>
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=AWbyh-q3WnVa7v9HMI48g0amrp6tGxWrKSUi21Ve85P5HdwP1chIP1Eoe__-N3ZH8hnntJHAqQRLVxjl&disable-funding=paylater&enable-funding=venmo">
+    </script>
+
+    <!-- <div class="loader">
+        <div class="load-container">
+            <div class="trombone-container">
+                <img id="loader-body" src="../img/tromboneLogo.svg" width="250px" alt="logo">
+                <img id="music-note-1" src="../img/musicNote.svg" width="40px" alt="logo">
+                <img id="music-note-2" src="../img/musicNote.svg" width="40px" alt="logo">
+                <img id="music-note-3" src="../img/musicNote.svg" width="40px" alt="logo">
+            </div>
+            <div class="brand" id="loading-brand">
+                <a href="#">Jonathan Tang Music</a>
+            </div>    
+        </div>    
+    </div> -->
+
+    <nav class="myNav">
+        <div class="brand">
+            <a href="home.html">Jonathan Tang Music</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="about_me.html">About Me</a></li>
+            <li><a href="lessons.html">Lessons</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a class="active" href="downloads.html">Downloads</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!--<li class="cart"><a href="#"><img src="../img/cart.png" /></a></li>-->
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <a class="cart-icon" href="#cart">
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+    </nav>
+    <div class="not-nav">
+        <section class="jumbotron" id="downloads">
+            <div class="my-downloads">
+                <img src="../img/TangPortrait-146.jpg" class="downloads-background" />
+                <h2>Downloads</h2>
+            </div>
+        </section>   
+        <div class="content">
+            <div class="arrangements">
+                <h3 class="arrangements-title">My Arrangements</h3>
+                <div class="arrangements-products">
+                    <div class="arrangement-card" id="1">
+                        <img class="arrangement-image" src="../img/sheet-music-temp.png" width="300px" alt="product image">
+                        <div class="card-right">
+                            <h2 class="arrangement-title">This is the title 1</h2>
+                            <h5>This is the composer</h5>
+                            <p>This is the description</p>
+                            <p>Digital Download</p>
+                            <span class="price">$5.00</span>
+                            <button class="add">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="arrangement-card" id="2">
+                        <img class="arrangement-image" src="../img/sheet-music-temp.png" width="300px" alt="product image">
+                        <div class="card-right">
+                            <h2 class="arrangement-title">This is the title 2</h2>
+                            <h5>This is the composer</h5>
+                            <p>This is the description</p>
+                            <p>Digital Download</p>
+                            <span class="price">$5.00</span>
+                            <button class="add">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="arrangement-card" id="3">
+                        <img class="arrangement-image" src="../img/sheet-music-temp.png" width="300px" alt="product image">
+                        <div class="card-right">
+                            <h2 class="arrangement-title">This is the title 3</h2>
+                            <h5>This is the composer</h5>
+                            <p>This is the description</p>
+                            <p>Digital Download</p>
+                            <span class="price">$5.00</span>
+                            <button class="add">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="arrangement-card" id="4">
+                        <img class="arrangement-image" src="../img/sheet-music-temp.png" width="300px" alt="product image">
+                        <div class="card-right">
+                            <h2 class="arrangement-title">This is the title 4</h2>
+                            <h5>This is the composer</h5>
+                            <p>This is the description</p>
+                            <p>Digital Download</p>
+                            <span class="price">$5.00</span>
+                            <button class="add">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="arrangement-card" id="5">
+                        <img class="arrangement-image" src="../img/sheet-music-temp.png" width="300px" alt="product image">
+                        <div class="card-right">
+                            <h2 class="arrangement-title">This is the title 5</h2>
+                            <h5>This is the composer</h5>
+                            <p>This is the description</p>
+                            <p>Digital Download</p>
+                            <span class="price">$5.00</span>
+                            <button class="add">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="cart">
+                <div class="cart-container">
+                    <hr>
+                    <h3>Your Cart</h3>
+                    <div class="cart-items-heading">
+                        <div>
+                            <p>Item</p>
+                        </div>
+                        <div>
+                            <p>Price</p>
+                        </div>
+                        <div>
+                            <p>Remove</p>
+                        </div>
+                    </div>
+                    <div class="cart-items"></div>
+                    <div class="cart-totals">
+                        <button id="clear-cart-button" class="cart-button">CLEAR CART</button>
+                        <div>
+                            <span>Subtotal: $</span><span id="sub-total">0</span>
+                        </div>
+                        <div>
+                            <span>Tax: $</span><span id="tax">0</span>
+                        </div>
+                        <div class="total">
+                            <span>Total: $</span><span id="total">0</span>
+                        </div>
+                        <!-- <button id="checkout-button" class="cart-button">Checkout</button> -->
+                        <div id="paypal-button-container"></div>
+                    </div>
+                </div>
+                <div class="empty-cart">
+                    <hr>
+                    <h3>Your Cart Is Empty</h3>
+                </div>
+            </div>
+        </div>
+        <div class="re-open d-none">
+            <p>Accidentally close out of your downloads too soon?</p><span id="open">Click here</span>
+        </div>
+        <div class="overlay">
+            <div class="purchased-links-container">
+                <span class="links-close">&times;</span>
+                <h3 class="purchased-links-heading">Thanks for your purchase! Here are your downloads.</h3>
+                <div class="purchased-links"></div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="social">
+                <a href="https://www.facebook.com/jaytangmusic" target="_blank"><i class="fab fa-facebook-f fa-lg"></i></a>
+                <a href="https://www.instagram.com/jaytangmusic/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+            </div>
+            <p class="copy">Jonathan Tang &copy 2020. Website created by <a class="fenner" href="https://fennerstudios.com">Fenner Studios</a></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="downloads.js"></script>
+    <script>
+    </script>
+</body>
+</html>
