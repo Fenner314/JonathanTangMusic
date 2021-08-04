@@ -1,31 +1,50 @@
 const pdfs = [
     {
         id: '1',
-        name: 'This is the title 1',
-        link: 'jonathantangmusic.com/sales/This is the title 2.pdf'
+        name: 'Liebesfreud',
+        link: 'https://drive.google.com/file/d/1iVVxsJVwnVJf5kxgSZvkJWskcvtn9bix/view?usp=sharing',
+        price: 20,
+        composer: 'Fritz Kreisler',
+        arranger: 'Jonathan Tang',
+        img: './img/liebesfreud.png'
     },
-    {
-        id: '2',
-        name: 'This is the title 2',
-        link: 'jonathantangmusic.com/sales/This is the title 2.pdf'
-    },
-    {
-        id: '3',
-        name: 'This is the title 3',
-        link: 'jonathantangmusic.com/sales/This is the title 3.pdf'
-    },
-    {
-        id: '4',
-        name: 'This is the title 4',
-        link: 'jonathantangmusic.com/sales/This is the title 4.pdf'
-    },
-    {
-        id: '5',
-        name: 'This is the title 5',
-        link: 'jonathantangmusic.com/sales/This is the title 5.pdf'
-    },
+    // {
+    //     id: '2',
+    //     name: 'This is the title 2',
+    //     link: 'https://drive.google.com/file/d/1iVVxsJVwnVJf5kxgSZvkJWskcvtn9bix/view?usp=sharing',
+    //     price: 20,
+    //     composer: 'Fritz Kreisler',
+    //     arranger: 'Jonathan Tang',
+    //     img: './img/liebesfreud.png'
+    // },
+    // {
+    //     id: '3',
+    //     name: 'This is the title 3',
+    //     link: 'https://drive.google.com/file/d/1iVVxsJVwnVJf5kxgSZvkJWskcvtn9bix/view?usp=sharing',
+    //     price: 20,
+    //     composer: 'Fritz Kreisler',
+    //     arranger: 'Jonathan Tang',
+    //     img: './img/liebesfreud.png'
+    // },
+    // {
+    //     id: '4',
+    //     name: 'This is the title 4',
+    //     link: 'https://drive.google.com/file/d/1iVVxsJVwnVJf5kxgSZvkJWskcvtn9bix/view?usp=sharing',
+    //     price: 20,
+    //     composer: 'Fritz Kreisler',
+    //     arranger: 'Jonathan Tang',
+    //     img: './img/liebesfreud.png'
+    // },
+    // {
+    //     id: '5',
+    //     name: 'This is the title 5',
+    //     link: 'https://drive.google.com/file/d/1iVVxsJVwnVJf5kxgSZvkJWskcvtn9bix/view?usp=sharing',
+    //     price: 20,
+    //     composer: 'Fritz Kreisler',
+    //     arranger: 'Jonathan Tang',
+    //     img: './img/liebesfreud.png'
+    // },
 ]
-console.log(process.env)
 
 const removeCartItem = event => {
     const buttonClicked = event.target;
@@ -64,6 +83,28 @@ const addItemToCart = (img, title, price, id, link) => {
     cartRow.getElementsByClassName('fa-trash')[0].addEventListener('click', removeCartItem);
     updateCartTotal();
 }
+
+const createProducts = () => {
+    const productDiv = document.querySelector('.arrangements-products');
+
+    pdfs.forEach(pdf => {
+        const productRowContent = `
+            <div class="arrangement-card" id=${pdf.id}>
+                <img class="arrangement-image" src=${pdf.img} width="250px" alt="product image">
+                <div class="card-right">
+                    <h2 class="arrangement-title">${pdf.name}</h2>
+                    <h5>Composer: ${pdf.composer}</h5>
+                    <p>This is the description</p>
+                    <p>Digital Download</p>
+                    <span class="price">$${pdf.price}</span>
+                    <button class="add">Add To Cart</button>
+                </div>
+            </div>
+        `;
+        productDiv.innerHTML += productRowContent;
+    })
+}
+createProducts();
 
 const getItemLinks = () => {
     const cartItems = document.querySelectorAll('.cart-item');

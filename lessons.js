@@ -41,16 +41,6 @@ let mobile = window.matchMedia('(max-width: 900px)');
 
 logo.style.opacity = 0;
 
-const fixAcademy = () => {
-    if (window.scrollY >= activationHeight) {
-        logo.style.opacity = 1
-    } else {
-        logo.style.opacity = 0
-    }
-};
-
-document.addEventListener('scroll', fixAcademy);
-
 window.onload = () => {
     logo.classList.remove('no-transition');
 
