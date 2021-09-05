@@ -141,7 +141,7 @@ h2 {
   justify-content: center;
   align-items: center;
 
-  transition: transform 1.5s ease-in-out;
+  transition: transform .7s ease-in-out;
 }
 
 .load-container {
@@ -1033,6 +1033,7 @@ li{
   border-radius: 4px;
   padding: 7px 20px;
   margin-left: 50px;
+  box-shadow: 2px 2px 5px black;
 
   transition: .3s background-color;
 }
